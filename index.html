@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══════════════════════════════════════
+       SEO: PRIMARY META TAGS
+  ═══════════════════════════════════════ -->
+  <title>BG Eraser – Free AI Background Remover | PNG, JPG, SVG, WebP Support</title>
+  <meta name="description" content="Remove image backgrounds instantly with AI. BG Eraser delivers HD pixel-perfect transparent PNGs from any JPG, PNG, SVG, or WebP photo — free, no sign-up, results in seconds." />
+  <meta name="keywords" content="background remover, AI background remover, remove bg, transparent background, remove background from image free, PNG background remover, JPG background remover, SVG background remover, WebP background remover, photo background eraser online" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="BG Eraser" />
+  <link rel="canonical" href="https://www.bgeraser.com/" />
+
+  <!-- ═══════════════════════════════════════
+       SEO: OPEN GRAPH
+  ═══════════════════════════════════════ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.bgeraser.com/" />
+  <meta property="og:title"       content="BG Eraser – Free AI Background Remover" />
+  <meta property="og:description" content="Instantly remove any image background with AI. HD transparent PNGs in seconds. Free, no sign-up, no watermarks." />
+  <meta property="og:image"       content="https://www.bgeraser.com/og-preview.jpg" />
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@bgeraser" />
+  <meta name="twitter:title"       content="BG Eraser – Free AI Background Remover" />
+  <meta name="twitter:description" content="Remove image backgrounds in one click with AI. Free, HD quality, no watermarks." />
+  <meta name="twitter:image"       content="https://www.bgeraser.com/og-preview.jpg" />
+
+  <!-- ═══════════════════════════════════════
+       STRUCTURED DATA
+  ═══════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "BG Eraser",
+    "url": "https://www.bgeraser.com",
+    "description": "AI-powered background remover supporting PNG, JPG, SVG, and WebP — delivers HD transparent PNG output in seconds.",
+    "applicationCategory": "PhotographyApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Fonts: Bebas Neue (display) + DM Sans (body) — strong, editorial pairing -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ░░░ AMBIENT SCENE ░░░ -->
+  <div class="scene" aria-hidden="true">
+    <div class="scene__orb scene__orb--a"></div>
+    <div class="scene__orb scene__orb--b"></div>
+    <div class="scene__orb scene__orb--c"></div>
+    <div class="scene__grid"></div>
+    <div class="scene__noise"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PROCESSING OVERLAY
+  ══════════════════════════════════════ -->
+  <div id="processingOverlay" class="overlay" aria-live="polite" aria-hidden="true" role="status">
+    <div class="overlay__panel">
+      <!-- Animated orbital rings -->
+      <div class="orbital" aria-hidden="true">
+        <div class="orbital__ring orbital__ring--1"></div>
+        <div class="orbital__ring orbital__ring--2"></div>
+        <div class="orbital__ring orbital__ring--3"></div>
+        <div class="orbital__nucleus">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </div>
+      </div>
+      <p class="overlay__title">AI is isolating the background layers…</p>
+      <p class="overlay__sub">Running neural segmentation pass</p>
+      <!-- Progress bar -->
+      <div class="overlay__track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div id="progressFill" class="overlay__fill"></div>
+      </div>
+      <div class="overlay__steps">
+        <span class="ostep ostep--active">Edge Detection</span>
+        <span class="ostep">Subject Masking</span>
+        <span class="ostep">Pixel Refinement</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SITE HEADER
+  ══════════════════════════════════════ -->
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <!-- Logo -->
+      <a href="/" class="logo" aria-label="BG Eraser — Home">
+        <span class="logo__gem" aria-hidden="true">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </span>
+        <span class="logo__text">BG<strong>Eraser</strong></span>
+      </a>
+
+      <!-- Navigation -->
+      <nav class="header__nav" aria-label="Primary navigation">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#formats">Formats</a>
+        <a href="#features">Features</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <!-- Header CTAs -->
+      <div class="header__actions">
+        <a href="#upload-zone" class="btn btn--ghost btn--sm">Try Free</a>
+        <a href="#upload-zone" class="btn btn--primary btn--sm">
+          <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+          <span>Remove BG</span>
+        </a>
+      </div>
+
+      <!-- Mobile menu toggle -->
+      <button class="header__burger" id="burgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile nav drawer -->
+    <div class="header__drawer" id="navDrawer" aria-hidden="true">
+      <nav aria-label="Mobile navigation">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#formats">Formats</a>
+        <a href="#features">Features</a>
+        <a href="#faq">FAQ</a>
+        <a href="#upload-zone" class="btn btn--primary btn--sm drawer__cta">
+          <i class="fa-solid fa-bolt" aria-hidden="true"></i> Remove BG Free
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════
+       AD SLOT — BELOW HEADER
+  ══════════════════════════════════════ -->
+  <aside class="ad-slot ad-slot--leaderboard" aria-label="Advertisement">
+    <div class="ad-slot__inner">
+      <!-- Google AdSense Ad Unit Placement — Responsive Leaderboard (728×90 desktop / 320×50 mobile) -->
+    </div>
+  </aside>
+
+  <!-- ══════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ─────────────────────────────────────
+         HERO SECTION
+    ───────────────────────────────────── -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero__inner">
+
+        <!-- Hero copy -->
+        <div class="hero__copy">
+          <div class="hero__badges" aria-label="Tool highlights">
+            <span class="badge"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> 100% Free</span>
+            <span class="badge"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> No Sign-Up</span>
+            <span class="badge"><i class="fa-solid fa-star" aria-hidden="true"></i> HD Output</span>
+          </div>
+          <h1 id="hero-heading" class="hero__heading">
+            Remove Any<br />
+            <em class="hero__heading-em">Image Background</em><br />
+            Instantly with AI
+          </h1>
+          <p class="hero__sub">
+            Upload a <strong>PNG, JPG, JPEG, SVG,</strong> or <strong>WebP</strong> photo — our deep-learning
+            neural network erases the background in seconds. Download a crisp, watermark-free
+            transparent PNG ready for design, e-commerce, or social media.
+          </p>
+        </div>
+
+        <!-- ═══ UPLOAD ZONE ═══ -->
+        <div class="upload-shell">
+          <!-- Animated border SVG overlay -->
+          <svg class="upload-shell__border" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <rect class="border-rect" x="1" y="1" width="98" height="98" rx="20" ry="20"
+                  fill="none" stroke="url(#borderGrad)" stroke-width="1.5"
+                  stroke-dasharray="8 4" pathLength="100"/>
+            <defs>
+              <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#818cf8"/>
+                <stop offset="50%" stop-color="#a78bfa"/>
+                <stop offset="100%" stop-color="#38bdf8"/>
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <div
+            id="upload-zone"
+            class="upload-zone"
+            role="button"
+            tabindex="0"
+            aria-label="Upload image — drag and drop or click to browse"
+            aria-describedby="upload-desc"
+          >
+            <input
+              type="file"
+              id="fileInput"
+              accept="image/png,image/jpeg,image/webp,image/svg+xml"
+              hidden
+              aria-hidden="true"
+            />
+
+            <!-- Default prompt -->
+            <div class="upload-zone__prompt" id="uploadPrompt">
+              <!-- Animated icon stack -->
+              <div class="uz-icon" aria-hidden="true">
+                <div class="uz-icon__halo uz-icon__halo--1"></div>
+                <div class="uz-icon__halo uz-icon__halo--2"></div>
+                <div class="uz-icon__face">
+                  <i class="fa-solid fa-cloud-arrow-up"></i>
+                </div>
+              </div>
+
+              <p class="uz-headline">Drag &amp; Drop your image here</p>
+              <p class="uz-sub" id="upload-desc">
+                or <strong>click to browse files</strong> from your device
+              </p>
+
+              <!-- Format chips -->
+              <div class="uz-formats" aria-label="Supported file formats">
+                <span class="fchip fchip--png">PNG</span>
+                <span class="fchip fchip--jpg">JPG</span>
+                <span class="fchip fchip--svg">SVG</span>
+                <span class="fchip fchip--webp">WebP</span>
+                <span class="fchip fchip--size">Up to 10 MB</span>
+              </div>
+            </div>
+
+            <!-- File-selected preview -->
+            <div class="upload-zone__preview" id="uploadPreview" hidden>
+              <div class="uzp__thumb-wrap">
+                <img id="previewThumb" src="" alt="Selected image preview" class="uzp__thumb" />
+                <div class="uzp__thumb-shine" aria-hidden="true"></div>
+              </div>
+              <div class="uzp__meta">
+                <div class="uzp__meta-icon" aria-hidden="true">
+                  <i class="fa-regular fa-file-image"></i>
+                </div>
+                <div class="uzp__meta-text">
+                  <p id="fileName" class="uzp__name"></p>
+                  <p id="fileSize" class="uzp__size"></p>
+                </div>
+                <button
+                  id="btnReset"
+                  class="uzp__reset"
+                  aria-label="Remove selected image and choose another"
+                >
+                  <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </div><!-- /#upload-zone -->
+
+          <!-- Corner accent decorations -->
+          <span class="uz-corner uz-corner--tl" aria-hidden="true"></span>
+          <span class="uz-corner uz-corner--tr" aria-hidden="true"></span>
+          <span class="uz-corner uz-corner--bl" aria-hidden="true"></span>
+          <span class="uz-corner uz-corner--br" aria-hidden="true"></span>
+        </div><!-- /.upload-shell -->
+
+        <!-- Hero action row -->
+        <div class="hero__actions" id="heroActions">
+          <button
+            id="btnRemove"
+            class="btn btn--primary btn--xl"
+            disabled
+            aria-disabled="true"
+          >
+            <span class="btn__icon" aria-hidden="true">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </span>
+            <span class="btn__label">Remove Background</span>
+            <span class="btn__glare" aria-hidden="true"></span>
+          </button>
+          <p class="hero__trust">
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            Encrypted &amp; never stored — your images are 100% private
+          </p>
+        </div>
+
+        <!-- ═══ LIVE RESULT COMPARISON ═══ -->
+        <div class="compare-grid" id="previewGrid" hidden aria-live="polite" aria-label="Image comparison result">
+          <!-- Original panel -->
+          <div class="compare-panel compare-panel--original">
+            <header class="compare-panel__header">
+              <div class="traffic-lights" aria-hidden="true">
+                <span class="tl tl--r"></span>
+                <span class="tl tl--y"></span>
+                <span class="tl tl--g"></span>
+              </div>
+              <span class="compare-panel__label">Original</span>
+            </header>
+            <div class="compare-panel__canvas">
+              <img id="originalImg" src="" alt="Original uploaded image" />
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="compare-divider" aria-hidden="true">
+            <div class="compare-divider__pill">
+              <i class="fa-solid fa-arrows-left-right"></i>
+            </div>
+          </div>
+
+          <!-- Result panel -->
+          <div class="compare-panel compare-panel--result">
+            <header class="compare-panel__header">
+              <div class="traffic-lights" aria-hidden="true">
+                <span class="tl tl--r"></span>
+                <span class="tl tl--y"></span>
+                <span class="tl tl--g"></span>
+              </div>
+              <span class="compare-panel__label compare-panel__label--result">
+                <i class="fa-solid fa-sparkles" aria-hidden="true"></i>
+                Background Removed
+              </span>
+            </header>
+            <div class="compare-panel__canvas checkerboard">
+              <img id="resultImg" src="" alt="Image with background removed — transparent PNG" />
+            </div>
+            <footer class="compare-panel__footer">
+              <button id="btnDownload" class="btn btn--success btn--lg btn--full">
+                <i class="fa-solid fa-download" aria-hidden="true"></i>
+                Download HD PNG
+              </button>
+            </footer>
+          </div>
+        </div><!-- /.compare-grid -->
+
+      </div><!-- /.hero__inner -->
+    </section><!-- /.hero -->
+
+    <!-- ══════════════════════════════════════
+         AD SLOT — AFTER HERO
+    ══════════════════════════════════════ -->
+    <aside class="ad-slot ad-slot--rectangle" aria-label="Advertisement">
+      <div class="ad-slot__inner">
+        <!-- Google AdSense Ad Unit Placement — Rectangle 336×280 or Auto -->
+      </div>
+    </aside>
+
+    <!-- ─────────────────────────────────────
+         HOW IT WORKS
+    ───────────────────────────────────── -->
+    <section class="section" id="how-it-works" aria-labelledby="hiw-h2">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__pill">Simple Process</span>
+          <h2 id="hiw-h2">How It Works</h2>
+          <p>Three effortless steps to a pixel-perfect transparent background — no design skills needed.</p>
+        </div>
+
+        <ol class="steps" role="list">
+          <li class="step glass-card" data-reveal>
+            <span class="step__num" aria-hidden="true">01</span>
+            <div class="step__icon" aria-hidden="true" style="--si: #818cf8;">
+              <i class="fa-solid fa-upload"></i>
+            </div>
+            <h3>Upload Your Image</h3>
+            <p>Drag and drop any <strong>PNG, JPG, JPEG, SVG,</strong> or <strong>WebP</strong> photo directly onto the zone — or tap to browse from your device. Files up to 10 MB are accepted, and the tool works equally well on desktop, tablet, and phone.</p>
+            <div class="step__arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></div>
+          </li>
+
+          <li class="step glass-card" data-reveal>
+            <span class="step__num" aria-hidden="true">02</span>
+            <div class="step__icon" aria-hidden="true" style="--si: #38bdf8;">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <h3>AI Detects &amp; Erases</h3>
+            <p>Our convolutional neural network — powered by the remove.bg API — performs semantic pixel segmentation. It identifies every edge, strand of hair, and fine structural contour, then precisely separates the subject from the background in seconds.</p>
+            <div class="step__arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></div>
+          </li>
+
+          <li class="step glass-card" data-reveal>
+            <span class="step__num" aria-hidden="true">03</span>
+            <div class="step__icon" aria-hidden="true" style="--si: #34d399;">
+              <i class="fa-solid fa-download"></i>
+            </div>
+            <h3>Download HD Result</h3>
+            <p>Review your result in the live side-by-side comparison. Satisfied? Click <strong>Download HD PNG</strong> to save a full-resolution transparent image instantly — no watermarks, no account required, no hidden fees. Completely free.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         AD SLOT — MID PAGE
+    ══════════════════════════════════════ -->
+    <aside class="ad-slot ad-slot--leaderboard" aria-label="Advertisement">
+      <div class="ad-slot__inner">
+        <!-- Google AdSense Ad Unit Placement — Leaderboard 728×90 / Responsive -->
+      </div>
+    </aside>
+
+    <!-- ─────────────────────────────────────
+         SUPPORTED FORMATS
+    ───────────────────────────────────── -->
+    <section class="section section--alt" id="formats" aria-labelledby="fmt-h2">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__pill">All-Format Support</span>
+          <h2 id="fmt-h2">Every Format, Covered</h2>
+          <p>BG Eraser handles every major image format used in modern design, photography, and development workflows.</p>
+        </div>
+
+        <div class="formats-grid">
+          <article class="format-card glass-card" data-reveal>
+            <div class="format-card__badge" style="--fc: #818cf8;">PNG</div>
+            <h3>PNG</h3>
+            <p>The gold standard for transparency. PNG images already support alpha channels, and our AI preserves every transparent pixel while cleanly erasing the background — ideal for logos, stickers, and product shots requiring a clean cutout.</p>
+          </article>
+
+          <article class="format-card glass-card" data-reveal>
+            <div class="format-card__badge" style="--fc: #f59e0b;">JPG / JPEG</div>
+            <h3>JPG &amp; JPEG</h3>
+            <p>The world's most photographed format. Despite JPG's lossy compression, our model achieves remarkable edge accuracy on portraits, food photography, fashion shots, and complex product backgrounds — delivering a smooth, natural cutout every time.</p>
+          </article>
+
+          <article class="format-card glass-card" data-reveal>
+            <div class="format-card__badge" style="--fc: #34d399;">SVG</div>
+            <h3>SVG</h3>
+            <p>Scalable vector graphics used for logos, icons, and illustrations. BG Eraser handles SVG uploads with accurate rasterisation before processing — perfect for brand teams needing background-free vector assets for presentations and marketing materials.</p>
+          </article>
+
+          <article class="format-card glass-card" data-reveal>
+            <div class="format-card__badge" style="--fc: #38bdf8;">WebP</div>
+            <h3>WebP</h3>
+            <p>Google's modern web-optimised format that offers superior compression and quality. BG Eraser fully supports WebP uploads, making it ideal for web developers and digital marketers who work with performance-first image pipelines and need transparent asset output.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────
+         KEY FEATURES
+    ───────────────────────────────────── -->
+    <section class="section" id="features" aria-labelledby="feat-h2">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__pill">Why Choose Us</span>
+          <h2 id="feat-h2">Powerful Features, Zero Complexity</h2>
+          <p>Everything a professional background removal tool should offer — built right in, at no cost.</p>
+        </div>
+
+        <ul class="features-grid" role="list">
+          <li class="feature glass-card" data-reveal style="--fa: #8b5cf6;">
+            <div class="feature__icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>Advanced AI Engine</h3>
+            <p>Powered by remove.bg's state-of-the-art neural network, trained on millions of diverse images — people, animals, products, vehicles, and complex transparent objects — delivering pixel-perfect segmentation on every upload.</p>
+            <span class="feature__tag">remove.bg API</span>
+          </li>
+
+          <li class="feature glass-card" data-reveal style="--fa: #0ea5e9;">
+            <div class="feature__icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+            <h3>Results in Under 5 Seconds</h3>
+            <p>No queues, no waiting rooms. Cloud infrastructure optimised for speed means your background is removed and ready for download in under five seconds on the vast majority of uploads — even high-megapixel shots.</p>
+            <span class="feature__tag">&lt; 5 seconds</span>
+          </li>
+
+          <li class="feature glass-card" data-reveal style="--fa: #10b981;">
+            <div class="feature__icon"><i class="fa-solid fa-crown"></i></div>
+            <h3>Full HD Resolution</h3>
+            <p>Unlike tools that silently downscale your image, BG Eraser returns results at the original upload resolution — up to 25 megapixels — so your transparent PNG remains perfectly sharp for both print and digital use.</p>
+            <span class="feature__tag">Up to 25 MP</span>
+          </li>
+
+          <li class="feature glass-card" data-reveal style="--fa: #f59e0b;">
+            <div class="feature__icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Privacy by Design</h3>
+            <p>Images are transmitted over encrypted HTTPS and are never stored on BG Eraser servers. We process your photo and deliver the transparent output — that's it. Your images, subjects, and data remain entirely yours.</p>
+            <span class="feature__tag">HTTPS Encrypted</span>
+          </li>
+
+          <li class="feature glass-card" data-reveal style="--fa: #ec4899;">
+            <div class="feature__icon"><i class="fa-solid fa-mobile-screen"></i></div>
+            <h3>Works on Every Device</h3>
+            <p>Fully responsive design means BG Eraser works flawlessly on a 4-inch smartphone and a 32-inch ultrawide monitor. No app installation. No account. Just open your browser, upload, and download your result.</p>
+            <span class="feature__tag">All Devices</span>
+          </li>
+
+          <li class="feature glass-card" data-reveal style="--fa: #14b8a6;">
+            <div class="feature__icon"><i class="fa-solid fa-tag"></i></div>
+            <h3>Completely Free</h3>
+            <p>No credit card, no premium tier, no watermarks slapped on your result. Basic background removal is free for every user, every time. We sustain the tool through non-intrusive advertising — not by charging you.</p>
+            <span class="feature__tag">Zero Cost</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         AD SLOT — BETWEEN SECTIONS
+    ══════════════════════════════════════ -->
+    <aside class="ad-slot ad-slot--leaderboard" aria-label="Advertisement">
+      <div class="ad-slot__inner">
+        <!-- Google AdSense Ad Unit Placement — Leaderboard 728×90 / In-Article -->
+      </div>
+    </aside>
+
+    <!-- ─────────────────────────────────────
+         USE CASES
+    ───────────────────────────────────── -->
+    <section class="section section--alt" aria-labelledby="uc-h2">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__pill">Real-World Applications</span>
+          <h2 id="uc-h2">Who Uses BG Eraser?</h2>
+          <p>From independent creators to enterprise teams, background removal is one of the most versatile tools in any visual workflow.</p>
+        </div>
+
+        <div class="usecases-grid">
+          <article class="usecase glass-card" data-reveal>
+            <span class="usecase__icon" aria-hidden="true"><i class="fa-solid fa-store"></i></span>
+            <h3>E-Commerce Sellers</h3>
+            <p>Amazon, Etsy, and Shopify sellers use BG Eraser daily to create clean white-background product photos that meet marketplace listing standards — directly boosting click-through rates and purchase conversions.</p>
+          </article>
+          <article class="usecase glass-card" data-reveal>
+            <span class="usecase__icon" aria-hidden="true"><i class="fa-solid fa-palette"></i></span>
+            <h3>Graphic Designers</h3>
+            <p>Design professionals save hours of tedious Photoshop pen-tool masking work. Drop any subject onto a new scene, composite multi-layer layouts, or prepare brand assets for logos and mockups in under a minute.</p>
+          </article>
+          <article class="usecase glass-card" data-reveal>
+            <span class="usecase__icon" aria-hidden="true"><i class="fa-solid fa-camera"></i></span>
+            <h3>Photographers</h3>
+            <p>Portrait and product photographers quickly clean distracting backgrounds from client galleries, press kits, headshots, and editorial submissions — without touching a selection mask or a Lightroom slider.</p>
+          </article>
+          <article class="usecase glass-card" data-reveal>
+            <span class="usecase__icon" aria-hidden="true"><i class="fa-brands fa-youtube"></i></span>
+            <h3>Content Creators</h3>
+            <p>YouTubers, TikTokers, and Instagram creators produce striking channel art, Story stickers, and thumbnail overlays by isolating themselves or their products against fully custom branded backgrounds.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         AD SLOT — BEFORE FAQ
+    ══════════════════════════════════════ -->
+    <aside class="ad-slot ad-slot--rectangle" aria-label="Advertisement">
+      <div class="ad-slot__inner">
+        <!-- Google AdSense Ad Unit Placement — Rectangle 336×280 or In-Article -->
+      </div>
+    </aside>
+
+    <!-- ─────────────────────────────────────
+         FAQ
+    ───────────────────────────────────── -->
+    <section class="section" id="faq" aria-labelledby="faq-h2">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__pill">Got Questions?</span>
+          <h2 id="faq-h2">Frequently Asked Questions</h2>
+          <p>Everything you need to know about AI background removal, answered clearly and honestly.</p>
+        </div>
+
+        <div class="faq-grid">
+
+          <details class="faq glass-card" data-reveal>
+            <summary class="faq__q">
+              <span>Is BG Eraser completely free to use?</span>
+              <i class="fa-solid fa-plus faq__icon" aria-hidden="true"></i>
+            </summary>
+            <div class="faq__a">
+              <p>Yes — removing an image background is entirely free for every user. You can upload your photo, process it with our AI, and download the full transparent PNG result at no cost and without creating an account. BG Eraser is funded through non-intrusive advertising rather than user subscriptions, meaning the core tool remains genuinely accessible to everyone regardless of budget.</p>
+            </div>
+          </details>
+
+          <details class="faq glass-card" data-reveal>
+            <summary class="faq__q">
+              <span>Which image formats does BG Eraser support?</span>
+              <i class="fa-solid fa-plus faq__icon" aria-hidden="true"></i>
+            </summary>
+            <div class="faq__a">
+              <p>BG Eraser accepts <strong>PNG, JPG, JPEG, SVG,</strong> and <strong>WebP</strong> image files up to 10 MB in size. The underlying remove.bg API processes images up to 25 megapixels in resolution. For optimal edge accuracy, we recommend using photos with clear contrast between the subject and background, though the AI model handles even cluttered or complex scenes with impressive fidelity.</p>
+            </div>
+          </details>
+
+          <details class="faq glass-card" data-reveal>
+            <summary class="faq__q">
+              <span>How does the AI background removal actually work?</span>
+              <i class="fa-solid fa-plus faq__icon" aria-hidden="true"></i>
+            </summary>
+            <div class="faq__a">
+              <p>BG Eraser uses a convolutional neural network (CNN) trained on millions of images spanning humans, animals, products, vehicles, and more. When you upload a photo, the model performs semantic segmentation: it classifies every pixel as either "subject" or "background" and generates a high-resolution alpha-matte mask. This mask is applied to produce a crisp transparent PNG. All computation runs on cloud infrastructure, which is why results arrive in seconds rather than minutes.</p>
+            </div>
+          </details>
+
+          <details class="faq glass-card" data-reveal>
+            <summary class="faq__q">
+              <span>Are my uploaded images stored or shared anywhere?</span>
+              <i class="fa-solid fa-plus faq__icon" aria-hidden="true"></i>
+            </summary>
+            <div class="faq__a">
+              <p>No. Privacy is non-negotiable. Images you upload are transmitted securely over HTTPS directly to the remove.bg processing API and are never stored on any BG Eraser server. Remove.bg's own privacy policy states images are deleted from their infrastructure within 24 hours of processing. We never sell, share, analyse, or use your uploaded photos for any commercial purpose whatsoever.</p>
+            </div>
+          </details>
+
+          <details class="faq glass-card" data-reveal>
+            <summary class="faq__q">
+              <span>Will there be a watermark on my downloaded image?</span>
+              <i class="fa-solid fa-plus faq__icon" aria-hidden="true"></i>
+            </summary>
+            <div class="faq__a">
+              <p>Absolutely not. The PNG file you download contains only your subject isolated on a transparent background — clean, professional, and ready for commercial or personal use without any BG Eraser branding. The only technical caveat is that extremely high-megapixel images may be returned at a preview resolution on the free API tier; for guaranteed full-resolution output on very large photos, a paid remove.bg plan may be required.</p>
+            </div>
+          </details>
+
+          <details class="faq glass-card" data-reveal>
+            <summary class="faq__q">
+              <span>Can I remove backgrounds from portraits, products, and animals?</span>
+              <i class="fa-solid fa-plus faq__icon" aria-hidden="true"></i>
+            </summary>
+            <div class="faq__a">
+              <p>Yes. The AI model is trained on an extremely diverse range of subject types. It excels at portrait and headshot photography (including fine hair detail), product and lifestyle shots, pet and wildlife photos, car and vehicle images, and logos on flat backgrounds. Highly transparent objects like glass, mirrors, or crystal may require manual refinement afterward, as fully transparent surfaces present a universal challenge for automated segmentation tools.</p>
+            </div>
+          </details>
+
+          <details class="faq glass-card" data-reveal>
+            <summary class="faq__q">
+              <span>Can I use the resulting transparent image commercially?</span>
+              <i class="fa-solid fa-plus faq__icon" aria-hidden="true"></i>
+            </summary>
+            <div class="faq__a">
+              <p>BG Eraser imposes no additional copyright restrictions on processed output — the result belongs entirely to you and may be used for any purpose, including commercial work. However, you remain solely responsible for ensuring you hold the rights to the original source image. If you are the photographer or hold valid licensing for the photo, you are free to use the background-removed version however you choose, including in product listings, advertising, and client deliverables.</p>
+            </div>
+          </details>
+
+          <details class="faq glass-card" data-reveal>
+            <summary class="faq__q">
+              <span>How do I add a new background after removing the original?</span>
+              <i class="fa-solid fa-plus faq__icon" aria-hidden="true"></i>
+            </summary>
+            <div class="faq__a">
+              <p>After downloading your transparent PNG, open it in any design tool — Adobe Photoshop, Canva (free, browser-based), Figma, GIMP (free, open-source), or even Google Slides. Place any colour, gradient, photograph, or pattern behind your subject layer. Because the PNG uses a genuine alpha channel, the composite looks completely natural with no edge fringing, halos, or artefacts. Canva is particularly recommended for non-designers as it is intuitive, free, and requires no software installation.</p>
+            </div>
+          </details>
+
+        </div><!-- /.faq-grid -->
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         AD SLOT — ABOVE FOOTER
+    ══════════════════════════════════════ -->
+    <aside class="ad-slot ad-slot--leaderboard" aria-label="Advertisement">
+      <div class="ad-slot__inner">
+        <!-- Google AdSense Ad Unit Placement — Leaderboard 728×90 -->
+      </div>
+    </aside>
+
+  </main><!-- /#main-content -->
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__glow" aria-hidden="true"></div>
+    <div class="container footer__inner">
+      <div class="footer__top">
+        <a href="/" class="logo" aria-label="BG Eraser — Home">
+          <span class="logo__gem" aria-hidden="true">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </span>
+          <span class="logo__text">BG<strong>Eraser</strong></span>
+        </a>
+        <p class="footer__tagline">
+          AI-powered background removal — free, fast, and private for everyone.
+        </p>
+        <div class="footer__formats" aria-label="Supported formats">
+          <span>PNG</span><span>JPG</span><span>SVG</span><span>WebP</span>
+        </div>
+      </div>
+
+      <div class="footer__divider"></div>
+
+      <div class="footer__bottom">
+        <nav class="footer__nav" aria-label="Footer links">
+          <a href="#how-it-works">How It Works</a>
+          <a href="#formats">Formats</a>
+          <a href="#features">Features</a>
+          <a href="#faq">FAQ</a>
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </nav>
+        <p class="footer__legal">
+          &copy; <span id="footerYear"></span> BG Eraser. Background removal powered by
+          <a href="https://www.remove.bg" target="_blank" rel="noopener noreferrer">remove.bg</a>.
+          All trademarks belong to their respective owners.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ░░ TOAST NOTIFICATION ░░ -->
+  <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
