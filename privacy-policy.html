@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Privacy Policy — BG Eraser Pro | CreativeStack</title>
+  <meta name="description" content="Privacy Policy for BG Eraser Pro by CreativeStack. Covers image processing, cookies, Google AdSense, GDPR, and CCPA compliance." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://creativestack-web.github.io/bg-eraser-pro/privacy-policy.html" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://creativestack-web.github.io/bg-eraser-pro/privacy-policy.html" />
+  <meta property="og:title"       content="Privacy Policy — BG Eraser Pro" />
+  <meta property="og:description" content="How BG Eraser Pro handles your data, images, cookies, and advertising. GDPR and CCPA compliant." />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <style>
+    /* ═══════════════════════════════════════════════
+       DESIGN TOKENS
+    ═══════════════════════════════════════════════ */
+    :root {
+      /* Palette — refined slate-navy tech theme */
+      --canvas:        #f9fafb;
+      --white:         #ffffff;
+      --ink:           #0f172a;
+      --ink-2:         #1e293b;
+      --ink-3:         #334155;
+      --muted:         #64748b;
+      --muted-2:       #94a3b8;
+      --rule:          #e2e8f0;
+      --surface:       #f1f5f9;
+      --surface-2:     #e8edf5;
+
+      --accent:        #3b5bdb;
+      --accent-hover:  #2f4cc4;
+      --accent-light:  #eef2ff;
+      --accent-mid:    #c5d0f5;
+      --accent-text:   #2f4cc4;
+
+      --green:         #16a34a;
+      --green-light:   #f0fdf4;
+      --green-mid:     #bbf7d0;
+
+      --amber:         #d97706;
+      --amber-light:   #fffbeb;
+      --amber-mid:     #fde68a;
+
+      --red:           #dc2626;
+      --red-light:     #fef2f2;
+      --red-mid:       #fecaca;
+
+      /* Spacing scale */
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-20: 5rem;
+
+      /* Radius */
+      --r-xs: 0.25rem;
+      --r-sm: 0.5rem;
+      --r-md: 0.75rem;
+      --r-lg: 1rem;
+      --r-xl: 1.5rem;
+      --r-2xl: 2rem;
+
+      /* Shadows */
+      --shadow-xs: 0 1px 2px rgba(15,23,42,0.05);
+      --shadow-sm: 0 1px 6px rgba(15,23,42,0.07), 0 2px 12px rgba(15,23,42,0.04);
+      --shadow-md: 0 4px 20px rgba(15,23,42,0.09), 0 2px 8px rgba(15,23,42,0.05);
+      --shadow-lg: 0 12px 40px rgba(15,23,42,0.12), 0 4px 16px rgba(15,23,42,0.06);
+
+      /* Typography */
+      --font-sans: 'DM Sans', ui-sans-serif, -apple-system, BlinkMacSystemFont,
+                   'Segoe UI', system-ui, Helvetica, Arial, sans-serif;
+      --font-serif: 'Fraunces', 'Georgia', 'Times New Roman', serif;
+      --font-mono: 'DM Mono', 'Fira Code', 'Cascadia Code', ui-monospace,
+                   'Courier New', monospace;
+
+      /* Transitions */
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+      --t-fast: 0.15s var(--ease);
+      --t-med:  0.28s var(--ease);
+
+      /* Layout */
+      --nav-h: 66px;
+      --container-lg: 1100px;
+      --container-md:  860px;
+      --sidebar-w:     240px;
+    }
+
+    /* ═══════════════════════════════════════════════
+       RESET & BASE
+    ═══════════════════════════════════════════════ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      font-size: 16px;
+    }
+    body {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--ink-3);
+      background: var(--canvas);
+      min-height: 100vh;
+    }
+    img  { display: block; max-width: 100%; }
+    a    { color: var(--accent); text-decoration: none; transition: color var(--t-fast); }
+    a:hover { color: var(--accent-hover); text-decoration: underline; }
+    ul, ol { padding-left: 1.5rem; }
+    li   { margin-bottom: 0.4rem; }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: var(--r-sm);
+    }
+
+    /* ═══════════════════════════════════════════════
+       CONTAINER
+    ═══════════════════════════════════════════════ */
+    .container {
+      width: 100%;
+      max-width: var(--container-lg);
+      margin: 0 auto;
+      padding: 0 var(--space-6);
+    }
+    .container--md {
+      max-width: var(--container-md);
+    }
+
+    /* ═══════════════════════════════════════════════
+       NAVIGATION
+    ═══════════════════════════════════════════════ */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--rule);
+      box-shadow: var(--shadow-xs);
+    }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    /* Logo */
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      text-decoration: none !important;
+      color: var(--ink) !important;
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: -0.02em;
+      flex-shrink: 0;
+    }
+    .nav__logo-gem {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, var(--accent) 0%, #6ea8fe 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.9rem;
+      box-shadow: 0 3px 10px rgba(59,91,219,0.35);
+      flex-shrink: 0;
+    }
+    .nav__logo em {
+      color: var(--accent);
+      font-style: normal;
+    }
+
+    /* Nav links */
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: var(--space-6);
+    }
+    .nav__links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color var(--t-fast);
+    }
+    .nav__links a:hover { color: var(--ink); }
+    .nav__links a.active {
+      color: var(--accent-text);
+      font-weight: 600;
+    }
+
+    /* CTA button */
+    .nav__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      background: var(--accent);
+      color: #fff !important;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.5rem 1.1rem;
+      border-radius: var(--r-md);
+      text-decoration: none !important;
+      transition: background var(--t-fast), transform var(--t-fast), box-shadow var(--t-fast);
+      box-shadow: 0 2px 8px rgba(59,91,219,0.32);
+      white-space: nowrap;
+    }
+    .nav__cta:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(59,91,219,0.42);
+    }
+
+    /* Burger */
+    .nav__burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      margin-left: auto;
+    }
+    .nav__burger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--ink-3);
+      border-radius: 2px;
+      transition: transform var(--t-fast), opacity var(--t-fast);
+    }
+    .nav__burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav__burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .nav__burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile drawer */
+    .nav__drawer {
+      display: none;
+      position: absolute;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--rule);
+      box-shadow: var(--shadow-md);
+      padding: var(--space-5) var(--space-6) var(--space-6);
+      z-index: 190;
+    }
+    .nav__drawer.open { display: block; }
+    .nav__drawer a {
+      display: block;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--ink-3);
+      text-decoration: none;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--rule);
+      transition: color var(--t-fast);
+    }
+    .nav__drawer a:last-child { border-bottom: none; }
+    .nav__drawer a:hover { color: var(--accent); }
+    .nav__drawer a.active { color: var(--accent-text); font-weight: 600; }
+
+    /* ═══════════════════════════════════════════════
+       BREADCRUMB
+    ═══════════════════════════════════════════════ */
+    .breadcrumb-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--rule);
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-3) 0;
+      font-size: 0.8rem;
+      color: var(--muted-2);
+    }
+    .breadcrumb a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color var(--t-fast);
+    }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb__sep { color: var(--muted-2); user-select: none; }
+    .breadcrumb__current { color: var(--muted); }
+
+    /* ═══════════════════════════════════════════════
+       PAGE HERO
+    ═══════════════════════════════════════════════ */
+    .page-hero {
+      background: linear-gradient(180deg, var(--white) 0%, var(--canvas) 100%);
+      border-bottom: 1px solid var(--rule);
+      padding: var(--space-16) 0 var(--space-12);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 380px;
+      background: radial-gradient(ellipse at center,
+        rgba(59, 91, 219, 0.06) 0%,
+        transparent 65%);
+      pointer-events: none;
+    }
+
+    .page-hero__inner {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+    }
+
+    .page-hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--accent-text);
+      background: var(--accent-light);
+      border: 1px solid var(--accent-mid);
+      padding: 0.3rem 0.85rem;
+      border-radius: 100px;
+      margin-bottom: var(--space-5);
+    }
+
+    .page-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      margin-bottom: var(--space-4);
+    }
+
+    .page-hero__meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-5);
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+    .page-hero__meta-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+    .page-hero__meta-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* Compliance badges row */
+    .compliance-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      margin-top: var(--space-6);
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.35rem 0.85rem;
+      border-radius: 100px;
+      letter-spacing: 0.02em;
+    }
+    .badge--green  { background: var(--green-light);  color: var(--green);  border: 1px solid var(--green-mid); }
+    .badge--blue   { background: var(--accent-light); color: var(--accent-text); border: 1px solid var(--accent-mid); }
+    .badge--amber  { background: var(--amber-light);  color: var(--amber);  border: 1px solid var(--amber-mid); }
+
+    /* ═══════════════════════════════════════════════
+       MAIN LAYOUT — SIDEBAR + CONTENT
+    ═══════════════════════════════════════════════ */
+    .policy-layout {
+      display: grid;
+      grid-template-columns: var(--sidebar-w) 1fr;
+      gap: var(--space-10);
+      align-items: start;
+      padding: var(--space-12) 0 var(--space-20);
+    }
+
+    /* ── Sidebar TOC ── */
+    .toc {
+      position: sticky;
+      top: calc(var(--nav-h) + var(--space-6));
+    }
+    .toc__title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted-2);
+      margin-bottom: var(--space-4);
+    }
+    .toc__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-left: 2px solid var(--rule);
+    }
+    .toc__list li { margin: 0; }
+    .toc__list a {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.35rem 0 0.35rem var(--space-4);
+      border-left: 2px solid transparent;
+      margin-left: -2px;
+      transition: color var(--t-fast), border-color var(--t-fast);
+      line-height: 1.4;
+    }
+    .toc__list a:hover {
+      color: var(--accent-text);
+      border-left-color: var(--accent);
+    }
+    .toc__list a.toc-active {
+      color: var(--accent-text);
+      border-left-color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* ── Policy Content ── */
+    .policy-content { min-width: 0; }
+
+    /* Section wrapper */
+    .policy-section {
+      margin-bottom: var(--space-12);
+      scroll-margin-top: calc(var(--nav-h) + var(--space-8));
+    }
+    .policy-section:last-child { margin-bottom: 0; }
+
+    /* Section heading */
+    .policy-section__header {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-4);
+      margin-bottom: var(--space-6);
+      padding-bottom: var(--space-5);
+      border-bottom: 1px solid var(--rule);
+    }
+    .policy-section__num {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: var(--r-md);
+      background: var(--accent-light);
+      border: 1px solid var(--accent-mid);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent-text);
+      font-variant-numeric: tabular-nums;
+      margin-top: 3px;
+    }
+    .policy-section h2 {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    /* Body text */
+    .policy-body p {
+      color: var(--ink-3);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: var(--space-4);
+    }
+    .policy-body p:last-child { margin-bottom: 0; }
+    .policy-body ul,
+    .policy-body ol {
+      margin: var(--space-3) 0 var(--space-4) var(--space-6);
+    }
+    .policy-body li {
+      font-size: 0.95rem;
+      color: var(--ink-3);
+      margin-bottom: var(--space-2);
+      line-height: 1.75;
+    }
+    .policy-body strong { color: var(--ink-2); font-weight: 600; }
+    .policy-body a {
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .policy-body a:hover { color: var(--accent-hover); }
+
+    /* Sub-heading within a section */
+    .policy-body h3 {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--ink-2);
+      letter-spacing: -0.01em;
+      margin: var(--space-6) 0 var(--space-3);
+    }
+    .policy-body h3:first-child { margin-top: 0; }
+
+    /* ── Callout boxes ── */
+    .callout {
+      display: flex;
+      gap: var(--space-4);
+      border-radius: var(--r-lg);
+      padding: var(--space-5) var(--space-6);
+      margin: var(--space-5) 0;
+      border: 1px solid;
+    }
+    .callout__icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      margin-top: 2px;
+    }
+    .callout__body p { margin-bottom: var(--space-2); font-size: 0.92rem; }
+    .callout__body p:last-child { margin-bottom: 0; }
+    .callout__title {
+      font-weight: 700;
+      font-size: 0.88rem;
+      margin-bottom: var(--space-2);
+      display: block;
+    }
+
+    .callout--green {
+      background: var(--green-light);
+      border-color: var(--green-mid);
+    }
+    .callout--green .callout__icon  { color: var(--green); }
+    .callout--green .callout__title { color: var(--green); }
+    .callout--green p               { color: #166534; }
+
+    .callout--blue {
+      background: var(--accent-light);
+      border-color: var(--accent-mid);
+    }
+    .callout--blue .callout__icon  { color: var(--accent); }
+    .callout--blue .callout__title { color: var(--accent-text); }
+    .callout--blue p               { color: #1e3a8a; }
+
+    .callout--amber {
+      background: var(--amber-light);
+      border-color: var(--amber-mid);
+    }
+    .callout--amber .callout__icon  { color: var(--amber); }
+    .callout--amber .callout__title { color: var(--amber); }
+    .callout--amber p               { color: #78350f; }
+
+    .callout--red {
+      background: var(--red-light);
+      border-color: var(--red-mid);
+    }
+    .callout--red .callout__icon  { color: var(--red); }
+    .callout--red .callout__title { color: var(--red); }
+    .callout--red p               { color: #7f1d1d; }
+
+    /* ── Definition / key-value list ── */
+    .def-list {
+      list-style: none;
+      padding: 0;
+      margin: var(--space-4) 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+    .def-item {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: var(--space-4);
+      font-size: 0.92rem;
+      padding: var(--space-3) var(--space-4);
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-md);
+    }
+    .def-item__term {
+      font-weight: 600;
+      color: var(--ink-2);
+      padding-top: 2px;
+    }
+    .def-item__desc { color: var(--ink-3); line-height: 1.6; }
+
+    /* ── Rights grid ── */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-3);
+      margin: var(--space-4) 0;
+    }
+    .right-card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-lg);
+      padding: var(--space-5);
+      transition: border-color var(--t-med), box-shadow var(--t-med);
+    }
+    .right-card:hover {
+      border-color: var(--accent-mid);
+      box-shadow: var(--shadow-sm);
+    }
+    .right-card__head {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      margin-bottom: var(--space-3);
+    }
+    .right-card__icon {
+      width: 36px; height: 36px;
+      border-radius: var(--r-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .right-card h3 {
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--ink-2);
+      margin: 0;
+    }
+    .right-card p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* ── Inline code / monospace ── */
+    code {
+      font-family: var(--font-mono);
+      font-size: 0.85em;
+      background: var(--surface-2);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-xs);
+      padding: 0.1em 0.4em;
+      color: var(--ink-2);
+    }
+
+    /* ── Table ── */
+    .policy-table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--rule);
+      border-radius: var(--r-lg);
+      margin: var(--space-4) 0;
+      box-shadow: var(--shadow-xs);
+    }
+    .policy-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+    .policy-table thead { background: var(--surface); }
+    .policy-table th {
+      text-align: left;
+      font-weight: 700;
+      color: var(--ink-2);
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: var(--space-4) var(--space-5);
+      border-bottom: 1px solid var(--rule);
+      white-space: nowrap;
+    }
+    .policy-table td {
+      padding: var(--space-4) var(--space-5);
+      color: var(--ink-3);
+      border-bottom: 1px solid var(--rule);
+      line-height: 1.6;
+      vertical-align: top;
+    }
+    .policy-table tr:last-child td { border-bottom: none; }
+    .policy-table tbody tr:hover { background: var(--surface); }
+
+    /* ── Last updated bar ── */
+    .update-bar {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-lg);
+      padding: var(--space-4) var(--space-5);
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: var(--space-10);
+    }
+    .update-bar__dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+      box-shadow: 0 0 0 3px rgba(22,163,74,0.18);
+    }
+
+    /* ── Contact info block ── */
+    .contact-block {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-xl);
+      padding: var(--space-8);
+      margin-top: var(--space-5);
+    }
+    .contact-block h3 {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: var(--space-4);
+      letter-spacing: -0.015em;
+    }
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      font-size: 0.9rem;
+      color: var(--ink-3);
+      padding: var(--space-3) 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .contact-row:last-child { border-bottom: none; }
+    .contact-row__label {
+      min-width: 100px;
+      font-weight: 600;
+      color: var(--ink-2);
+      flex-shrink: 0;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Horizontal rule ── */
+    .h-rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: var(--space-10) 0;
+    }
+
+    /* ═══════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════ */
+    .footer {
+      background: var(--white);
+      border-top: 1px solid var(--rule);
+      padding: var(--space-10) 0;
+    }
+    .footer__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-5);
+      text-align: center;
+    }
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .footer__logo em { color: var(--accent); font-style: normal; }
+    .footer__nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--space-5);
+    }
+    .footer__nav a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color var(--t-fast);
+    }
+    .footer__nav a:hover { color: var(--accent); }
+    .footer__nav a.active { color: var(--accent-text); }
+    .footer__legal {
+      font-size: 0.78rem;
+      color: var(--muted-2);
+      max-width: 600px;
+      line-height: 1.6;
+    }
+    .footer__legal a { color: var(--muted); }
+    .footer__legal a:hover { color: var(--accent); }
+
+    /* ═══════════════════════════════════════════════
+       RESPONSIVE — ≤ 960px
+    ═══════════════════════════════════════════════ */
+    @media (max-width: 960px) {
+      .policy-layout {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding-top: var(--space-8);
+      }
+      .toc {
+        position: static;
+        display: none; /* Hidden on mobile — use native scroll */
+      }
+      .rights-grid  { grid-template-columns: 1fr; }
+      .def-item     { grid-template-columns: 1fr; gap: var(--space-1); }
+      .def-item__term { color: var(--accent-text); font-size: 0.85rem; }
+    }
+
+    @media (max-width: 640px) {
+      :root { --nav-h: 62px; }
+
+      .nav__links  { display: none; }
+      .nav__cta    { display: none; }
+      .nav__burger { display: flex; }
+
+      .page-hero   { padding: var(--space-10) 0 var(--space-8); }
+      .page-hero h1 { font-size: 1.85rem; }
+
+      .policy-section h2   { font-size: 1.2rem; }
+      .policy-section__num { display: none; }
+      .policy-section__header { gap: var(--space-3); }
+
+      .callout { flex-direction: column; gap: var(--space-2); }
+      .contact-row { flex-direction: column; align-items: flex-start; gap: var(--space-1); }
+      .contact-block { padding: var(--space-5); }
+
+      .compliance-badges { gap: var(--space-2); }
+      .badge { font-size: 0.72rem; padding: 0.28rem 0.7rem; }
+
+      .policy-table th,
+      .policy-table td { padding: var(--space-3); font-size: 0.82rem; }
+    }
+
+    @media (max-width: 400px) {
+      .container { padding: 0 var(--space-4); }
+    }
+
+    /* ═══════════════════════════════════════════════
+       PAGE-LOAD ANIMATION
+    ═══════════════════════════════════════════════ */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .page-hero__badge  { animation: fadeUp 0.45s ease both; }
+    .page-hero h1      { animation: fadeUp 0.5s 0.07s ease both; }
+    .page-hero__meta   { animation: fadeUp 0.5s 0.14s ease both; }
+    .compliance-badges { animation: fadeUp 0.5s 0.21s ease both; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="BG Eraser Pro — Home">
+        <div class="nav__logo-gem" aria-hidden="true">✦</div>
+        BG<em>Eraser</em>&nbsp;Pro
+      </a>
+
+      <div class="nav__links" role="list">
+        <a href="index.html" role="listitem">Tool</a>
+        <a href="about.html" role="listitem">About</a>
+        <a href="contact.html" role="listitem">Contact</a>
+        <a href="privacy-policy.html" class="active" role="listitem" aria-current="page">Privacy</a>
+        <a href="index.html" class="nav__cta" role="listitem">Remove BG Free →</a>
+      </div>
+
+      <button class="nav__burger" id="burgerBtn"
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+              aria-controls="navDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="nav__drawer" id="navDrawer" aria-hidden="true">
+      <a href="index.html">Tool</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html" class="active">Privacy Policy</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       BREADCRUMB
+  ══════════════════════════════════════════ -->
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <span class="breadcrumb__current" aria-current="page">Privacy Policy</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       PAGE HERO
+  ══════════════════════════════════════════ -->
+  <header class="page-hero" role="banner">
+    <div class="container">
+      <div class="page-hero__inner">
+        <div class="page-hero__badge" aria-label="Legal document">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2.5"
+               aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          Legal &amp; Privacy
+        </div>
+
+        <h1>Privacy Policy</h1>
+
+        <div class="page-hero__meta">
+          <div class="page-hero__meta-item">
+            <div class="page-hero__meta-dot" aria-hidden="true"></div>
+            <span><strong>BG Eraser Pro</strong> by CreativeStack</span>
+          </div>
+          <div class="page-hero__meta-item">
+            <div class="page-hero__meta-dot" aria-hidden="true"></div>
+            <span>Effective: <time datetime="2025-01-01">January 1, 2025</time></span>
+          </div>
+          <div class="page-hero__meta-item">
+            <div class="page-hero__meta-dot" aria-hidden="true"></div>
+            <span>Last updated: <time datetime="2025-07-01">July 1, 2025</time></span>
+          </div>
+        </div>
+
+        <div class="compliance-badges" role="list" aria-label="Compliance certifications">
+          <span class="badge badge--green" role="listitem">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            GDPR Compliant
+          </span>
+          <span class="badge badge--blue" role="listitem">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            CCPA Compliant
+          </span>
+          <span class="badge badge--amber" role="listitem">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Google AdSense Policy
+          </span>
+          <span class="badge badge--green" role="listitem">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Zero Image Storage
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════════ -->
+  <main id="main-content">
+    <div class="container">
+      <div class="policy-layout">
+
+        <!-- ────────────────────────────────
+             SIDEBAR — TABLE OF CONTENTS
+        ──────────────────────────────── -->
+        <aside class="toc" aria-label="Table of contents">
+          <p class="toc__title">Contents</p>
+          <nav aria-label="Policy sections">
+            <ol class="toc__list">
+              <li><a href="#overview"           class="toc-link">Overview</a></li>
+              <li><a href="#information-we-collect" class="toc-link">Information We Collect</a></li>
+              <li><a href="#image-processing"   class="toc-link">Image Processing</a></li>
+              <li><a href="#log-files"          class="toc-link">Log Files &amp; Analytics</a></li>
+              <li><a href="#cookies"            class="toc-link">Cookies &amp; Web Beacons</a></li>
+              <li><a href="#dart-cookies"       class="toc-link">DoubleClick DART Cookies</a></li>
+              <li><a href="#third-party"        class="toc-link">Third-Party Services</a></li>
+              <li><a href="#adsense"            class="toc-link">Google AdSense</a></li>
+              <li><a href="#data-retention"     class="toc-link">Data Retention</a></li>
+              <li><a href="#children"           class="toc-link">Children's Privacy</a></li>
+              <li><a href="#gdpr"               class="toc-link">GDPR Rights</a></li>
+              <li><a href="#ccpa"               class="toc-link">CCPA Rights</a></li>
+              <li><a href="#security"           class="toc-link">Data Security</a></li>
+              <li><a href="#changes"            class="toc-link">Policy Changes</a></li>
+              <li><a href="#contact-dpo"        class="toc-link">Contact &amp; DPO</a></li>
+            </ol>
+          </nav>
+        </aside>
+
+        <!-- ────────────────────────────────
+             POLICY BODY
+        ──────────────────────────────── -->
+        <article class="policy-content" aria-label="Privacy Policy document">
+
+          <!-- Last updated bar -->
+          <div class="update-bar" role="note" aria-label="Document status">
+            <div class="update-bar__dot" aria-hidden="true"></div>
+            <span>This policy was last reviewed and updated on <strong>July 1, 2025</strong>. Changes take effect immediately upon publication.</span>
+          </div>
+
+          <!-- ── 0. OVERVIEW ── -->
+          <section id="overview" class="policy-section" aria-labelledby="overview-h">
+            <div class="policy-section__header">
+              <div class="policy-section__num" aria-hidden="true">00</div>
+              <h2 id="overview-h">Overview</h2>
+            </div>
+            <div class="policy-body">
+              <p>This Privacy Policy describes how <strong>BG Eraser Pro</strong>, published and operated by <strong>CreativeStack</strong> (<code>creativestack-web</code>) at <a href="https://creativestack-web.github.io/bg-eraser-pro/" target="_blank" rel="noopener noreferrer">https://creativestack-web.github.io/bg-eraser-pro/</a> ("the Website", "the Tool", "we", "our", or "us"), collects, uses, and safeguards information when you access our service.</p>
+
+              <p>BG Eraser Pro is a free, browser-based AI image background removal tool. By using the Website, you agree to the collection and use of information as described in this policy. If you do not agree with any part of this policy, please discontinue use of the Website immediately.</p>
+
+              <div class="callout callout--blue">
+                <div class="callout__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                </div>
+                <div class="callout__body">
+                  <span class="callout__title">Plain-Language Summary</span>
+                  <p>We do not sell your data. We do not store your images. We use standard website analytics and display Google ads. You can opt out of personalised advertising at any time. Your images are processed in real time and immediately discarded after delivery of results.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── 1. INFORMATION WE COLLECT ── -->
+          <section id="information-we-collect" class="policy-section" aria-labelledby="info-h">
+            <div class="policy-section__header">
+              <div class="policy-section__num" aria-hidden="true">01</div>
+              <h2 id="info-h">Information We Collect</h2>
+            </div>
+            <div class="policy-body">
+              <p>BG Eraser Pro collects the minimum information necessary to operate the service and deliver a high-quality user experience. Information is collected in two primary ways:</p>
+
+              <h3>1.1 Information You Provide Voluntarily</h3>
+              <p>When you use BG Eraser Pro's background removal feature, you upload an image file from your device. This image is the only content you actively submit to the tool. It is transmitted over an encrypted HTTPS connection to our third-party image processing API (<strong>remove.bg</strong>) solely for the purpose of background removal. <strong>We do not receive, store, cache, or retain a copy of this image on any BG Eraser Pro server.</strong></p>
+
+              <h3>1.2 Information Collected Automatically</h3>
+              <p>Like the vast majority of websites on the internet, BG Eraser Pro automatically collects certain non-personally identifiable technical information when you visit the Website. This may include:</p>
+              <ul>
+                <li>Your Internet Protocol (IP) address</li>
+                <li>Browser type, version, and language settings</li>
+                <li>Operating system and device type</li>
+                <li>Referring URLs and exit pages</li>
+                <li>Date, time, and duration of your visit</li>
+                <li>Pages and features accessed during your session</li>
+                <li>Geographic region (country/city level, derived from IP address)</li>
+              </ul>
+              <p>This information is collected through standard web server log files and third-party analytics services. It is used in aggregate form to understand how users interact with the Website and to improve performance and usability.</p>
+
+              <div class="callout callout--green">
+                <div class="callout__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="callout__body">
+                  <span class="callout__title">No Account Required</span>
+                  <p>BG Eraser Pro does not require you to create an account, provide an email address, or submit any personally identifiable information to use the background removal feature. You are anonymous to us.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── 2. IMAGE PROCESSING ── -->
+          <section id="image-processing" class="policy-section" aria-labelledby="img-h">
+            <div class="policy-section__header">
+              <div class="policy-section__num" aria-hidden="true">02</div>
+              <h2 id="img-h">Image Processing — Critical Disclosure</h2>
+            </div>
+            <div class="policy-body">
+
+              <div class="callout callout--green">
+                <div class="callout__icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                </div>
+                <div class="callout__body">
+                  <span class="callout__title">We Do NOT Store Your Images — Ever</span>
+                  <p>Images uploaded to BG Eraser Pro are processed exclusively in real time via a secure, encrypted connection to the <strong>remove.bg API</strong>. At no point are your uploaded images saved, stored, archived, backed up, cached, indexed, or retained on any BG Eraser Pro or CreativeStack server, database, cloud storage bucket, or other persistent storage medium.</p>
+                </div>
+              </div>
+
+              <p>The complete lifecycle of an image uploaded to BG Eraser Pro is as follows:</p>
+
+              <div class="policy-table-wrap">
+                <table class="policy-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Step</th>
+                      <th scope="col">Action</th>
+                      <th scope="col">Storage Impact</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>1</strong></td>
+                      <td>You select or drag an image file in your browser.</td>
+                      <td>File exists only in your browser's local memory (RAM). No upload has occurred.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>2</strong></td>
+                      <td>You click "Remove Background". The browser sends a direct HTTPS API request to remove.bg containing your image.</td>
+                      <td>The image is transmitted over TLS encryption. It is not routed through any BG Eraser Pro server.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>3</strong></td>
+                      <td>The remove.bg neural network processes the image and returns a transparent PNG result.</td>
+                      <td>remove.bg processes the image in memory and deletes it within 24 hours per their own privacy policy.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>4</strong></td>
+                      <td>The transparent PNG result is delivered directly to your browser.</td>
+                      <td>The result is stored only in your browser's temporary memory until you download it or close the tab.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>5</strong></td>
+                      <td>You click "Download HD PNG" to save the result.</td>
+                      <td>The file is saved to your local device. It is removed from browser memory when the tab is closed or you upload a new image.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h3>Third-Party API Processing — remove.bg</h3>
+              <p>Background removal is powered by the <strong>remove.bg API</strong>, operated by Kaleido AI GmbH, Schottenfeldgasse 26/2/31, 1070 Vienna, Austria. Remove.bg has its own privacy policy governing its handling of submitted images, which is available at <a href="https://www.remove.bg/privacy" target="_blank" rel="noopener noreferrer">https://www.remove.bg/privacy</a>. We encourage you to review their policy. By using BG Eraser Pro, you also agree to be bound by remove.bg's terms of service with respect to image processing.</p>
+
+              <p>Remove.bg states that images uploaded via API are automatically and permanently deleted from their servers within 24 hours of processing. They do not use uploaded images to train machine learning models without explicit consent.</p>
+            </div>
+          </section>
+
+          <!-- ── 3. LOG FILES ── -->
+          <section id="log-files" class="policy-section" aria-labelledby="log-h">
+            <div class="policy-section__header">
+              <div class="policy-section__num" aria-hidden="true">03</div>
+              <h2 id="log-h">Log Files &amp; Network Analytics</h2>
+            </div>
+            <div class="policy-body">
+              <p>BG Eraser Pro follows the standard industry practice of using server-side log files. Log files record information about each request made to the Website's hosting infrastructure (GitHub Pages CDN). The information collected by log files is standard across most internet services and includes:</p>
+
+              <ul>
+                <li><strong>IP Addresses:</strong> The Internet Protocol address assigned to your device by your Internet Service Provider (ISP). IP addresses are not linked to personally identifiable information.</li>
+                <li><strong>Browser Type &amp; Version:</strong> e.g., Google Chrome 120, Mozilla Firefox 121, Safari 17.</li>
+                <li><strong>Internet Service Provider (ISP):</strong> The organisation providing your internet connection.</li>
+                <li><strong>Referring and Exit Pages:</strong> The URL of the page you visited immediately before and after BG Eraser Pro.</li>
+                <li><strong>Timestamps:</strong> The date and time of each request, including the specific pages and resources accessed.</li>
+                <li><strong>Clickstream Data:</strong> A record of the sequence of pages or features you navigated within the Website.</li>
+              </ul>
+
+              <h3>Purpose of Log File Collection</h3>
+              <p>Log file data is used exclusively for the following legitimate operational purposes:</p>
+              <ul>
+                <li>Analysing website traffic trends, popular features, and geographic usage patterns.</li>
+                <li>Diagnosing and debugging technical errors, performance bottlenecks, and infrastructure issues.</li>
+                <li>Detecting and investigating malicious activity, abuse, or security incidents.</li>
+                <li>Generating anonymised aggregate reports to inform product improvements.</li>
+              </ul>
+
+              <h3>GitHub Pages Analytics</h3>
+              <p>BG Eraser Pro is hosted on <strong>GitHub Pages</strong>, a service provided by GitHub, Inc. (a subsidiary of Microsoft Corporation). GitHub may independently collect technical log and analytics data as part of their hosting infrastructure. This collection is governed by <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub's Privacy Statement</a>. BG Eraser Pro does not control or have access to GitHub's internal server log data.</p>
+
+              <p>Log data collected directly by or on behalf of BG Eraser Pro is retained for a maximum period of <strong>90 days</strong>, after which it is automatically purged. No log data is sold or shared with third parties for marketing purposes.</p>
+            </div>
+          </section>
+
+          <!-- ── 4. COOKIES ── -->
+          <section id="cookies" class="policy-section" aria-labelledby="cookie-h">
+            <div class="policy-section__header">
+              <div class="policy-section__num" aria-hidden="true">04</div>
+              <h2 id="cookie-h">Cookies &amp; Web Beacons</h2>
+            </div>
+            <div class="policy-body">
+              <p>BG Eraser Pro uses cookies and similar tracking technologies to improve your browsing experience, deliver relevant advertisements, and analyse website traffic. This section explains what cookies are, how we use them, and how you can control them.</p>
+
+              <h3>What Are Cookies?</h3>
+              <p>A <strong>cookie</strong> is a small text file that a website places on your device (computer, smartphone, or tablet) when you visit it. Cookies allow websites to "remember" information about your visit, such as your preferred language settings or whether you have previously agreed to a terms of service banner. Cookies do not contain executable code, viruses, or any personally identifiable information unless you have specifically provided such information to the website.</p>
+
+              <h3>What Are Web Beacons?</h3>
+              <p>A <strong>web beacon</strong> (also called a pixel tag, clear GIF, or tracking pixel) is a tiny, transparent 1×1 pixel image embedded in a web page or email. When your browser loads a page containing a web beacon, it sends a request to the server hosting the image. This request can record information such as your IP address, the time of your visit, and whether you performed a specific action (such as clicking a link). Web beacons are commonly used by advertising networks to track the effectiveness of ad campaigns.</p>
+
+              <h3>Types of Cookies Used on BG Eraser Pro</h3>
+              <div class="policy-table-wrap">
+                <table class="policy-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Category</th>
+                      <th scope="col">Cookie Name(s)</th>
+                      <th scope="col">Provider</th>
+                      <th scope="col">Purpose</th>
+                      <th scope="col">Duration</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Essential</strong></td>
+                      <td><code>__Secure-*</code></td>
+                      <td>GitHub Pages</td>
+                      <td>Required for secure HTTPS delivery of the website. Cannot be disabled.</td>
+                      <td>Session</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Analytics</strong></td>
+                      <td><code>_ga</code>, <code>_gid</code>, <code>_gat</code></td>
+                      <td>Google Analytics</td>
+                      <td>Anonymised traffic analysis: page views, session duration, device types, geographic region.</td>
+                      <td>Up to 2 years</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Advertising</strong></td>
+                      <td><code>IDE</code>, <code>DSID</code>, <code>NID</code></td>
+                      <td>Google AdSense / DoubleClick</td>
+                      <td>Personalised advertising delivery and conversion tracking. Used to serve relevant ads based on your browsing history.</td>
+                      <td>Up to 13 months</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Advertising</strong></td>
+                      <td><code>test_cookie</code></td>
+                      <td>DoubleClick (Google)</td>
+                      <td>Tests whether your browser accepts cookies to enable ad delivery.</td>
+                      <td>Session</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Functional</strong></td>
+                      <td><code>localStorage</code> keys</td>
+                      <td>BG Eraser Pro</td>
+                      <td>Stores your UI preference settings (e.g., theme) locally in your browser. No data is transmitted to our servers.</td>
+                      <td>Persistent</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h3>How to Manage and Disable Cookies</h3>
+              <p>You have the right to accept or refuse cookies. Most modern web browsers allow you to control cookies through your browser settings. Please note that disabling certain cookies may affect the functionality of BG Eraser Pro and other websites you visit.</p>
+              <p>To manage cookies in your browser, visit the help pages for:</p>
+              <ul>
+                <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer">Google Chrome</a></li>
+                <li><a href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop" target="_blank" rel="noopener noreferrer">Mozilla Firefox</a></li>
+                <li><a href="https://support.apple.com/en-gb/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer">Apple Safari</a></li>
+                <li><a href="https://support.microsoft.com/en-us/windows/manage-cookies-in-microsoft-edge" target="_blank" rel="noopener noreferrer">Microsoft Edge</a></li>
+              </ul>
+              <p>To opt out of Google Analytics tracking specifically, you may install the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>.</p>
+            </div>
+          </section>
+
+          <!-- ── 5. DART COOKIES ── -->
+          <section id="dart-cookies" class="policy-section" aria-labelledby="dart-h">
+            <div class="policy-section__header">
+              <div class="policy-section__num" aria-hidden="true">05</div>
+              <h2 id="dart-h">Google DoubleClick DART Cookies</h2>
+            </div>
+            <div class="policy-body">
+              <p>BG Eraser Pro uses <strong>Google AdSense</strong> to serve advertisements. As part of this advertising relationship, Google uses a technology known as the <strong>DoubleClick DART cookie</strong> to serve ads to visitors of BG Eraser Pro.</p>
+
+              <div class="callout callout--amber">
+                <div class="callout__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                </div>
+                <div class="callout__body">
+                  <span class="callout__title">What is the DART Cookie?</span>
+                  <p>The DART cookie is set by Google's advertising network (DoubleClick, now part of Google's marketing platform) and enables Google to display advertisements to you on BG Eraser Pro and other websites based on your previous visits to sites across the Internet. This is known as interest-based or behavioural advertising.</p>
+                </div>
+              </div>
+
+              <h3>How DART Cookies Work</h3>
+              <p>When you visit BG Eraser Pro, the Google AdSense code embedded in our pages instructs your browser to request an ad from Google's ad servers. As part of this process, Google may set or read a DART cookie (<code>IDE</code>) stored in your browser under the domain <code>doubleclick.net</code>. This cookie does not contain personally identifiable information such as your name, email address, or postal address.</p>
+
+              <p>The DART cookie stores a unique, anonymous identifier (a randomly generated string of characters). Google uses this identifier to:</p>
+              <ul>
+                <li>Serve you advertisements that are relevant to your interests, based on your browsing history across participating websites.</li>
+                <li>Limit the number of times you see a particular advertisement (frequency capping).</li>
+                <li>Measure the effectiveness of advertising campaigns and report aggregated statistics to advertisers.</li>
+                <li>Prevent you from seeing the same ad repeatedly in a short period.</li>
+              </ul>
+
+              <h3>Opting Out of DART / Personalised Advertising</h3>
+              <p>You can opt out of Google's use of the DART cookie for interest-based advertising at any time. To do so, visit the <strong>Google Ad Settings page</strong> at <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">https://www.google.com/settings/ads</a>, or opt out through the <strong>Network Advertising Initiative opt-out page</strong> at <a href="https://optout.networkadvertising.org/" target="_blank" rel="noopener noreferrer">https://optout.networkadvertising.org/</a>.</p>
+
+              <p>Opting out of personalised advertising means you will still see advertisements on BG Eraser Pro, but they will be contextual (based on the content of the page) rather than interest-based (based on your browsing history).</p>
+
+              <p>For more information about how Google uses data when you use our site and how to manage Google advertising cookies, please visit: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">https://policies.google.com/technologies/partner-sites</a>.</p>
+            </div>
+          </section>
+
+          <!-- ── 6. THIRD-PARTY PRIVACY POLICIES ── -->
+          <section id="third-party" class="policy-section" aria-labelledby="third-h">
+            <div class="policy-section__header">
+              <div class="policy-section__num" aria-hidden="true">06</div>
+              <h2 id="third-h">Third-Party Privacy Policies</h2>
+            </div>
+            <div class="policy-body">
+              <p>BG Eraser Pro integrates with several third-party services to deliver functionality, analytics, and advertising. Each of these third parties has its own independent privacy policy that governs their data collection and use practices. BG Eraser Pro is not responsible for the privacy practices of these third parties.</p>
+
+              <p>We strongly encourage you to review the privacy policies of any third-party services you interact with through our Website:</p>
+
+              <ul class="def-list" role="list">
+                <li class="def-item" role="listitem">
+                  <div class="def-item__term">remove.bg API</div>
+                  <div class="def-item__desc">Image processing service provided by Kaleido AI GmbH. Processes your uploaded images for background removal. Privacy Policy: <a href="https://www.remove.bg/privacy" target="_blank" rel="noopener noreferrer">remove.bg/privacy</a></div>
+                </li>
+                <li class="def-item" role="listitem">
+                  <div class="def-item__term">Google AdSense</div>
+                  <div class="def-item__desc">Advertising service provided by Google LLC. Displays contextual and personalised advertisements. Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></div>
+                </li>
+                <li class="def-item" role="listitem">
+                  <div class="def-item__term">Google Analytics</div>
+                  <div class="def-item__desc">Analytics service provided by Google LLC. Collects anonymised traffic and usage data. Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></div>
+                </li>
+                <li class="def-item" role="listitem">
+                  <div class="def-item__term">GitHub Pages</div>
+                  <div class="def-item__desc">Website hosting infrastructure provided by GitHub, Inc. (Microsoft). Serves the Website files and may collect server log data. Privacy Policy: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Privacy Statement</a></div>
+                </li>
+                <li class="def-item" role="listitem">
+                  <div class="def-item__term">Google Fonts</div>
+                  <div class="def-item__desc">Font delivery service provided by Google LLC. Serves web font files and may log IP addresses. Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></div>
+                </li>
+                <li class="def-item" role="listitem">
+                  <div class="def-item__term">Font Awesome CDN</div>
+                  <div class="def-item__desc">Icon font delivery service by Fonticons, Inc. Serves icon assets via their content delivery network. Privacy Policy: <a href="https://fontawesome.com/privacy" target="_blank" rel="noopener noreferrer">fontawesome.com/privacy</a></div>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- ── 7. GOOGLE ADSENSE ── -->
+          <section id="adsense" class="policy-section" aria-labelledby="adsense-h">
+            <div class="policy-section__header">
+              <div class="policy-section__num" aria-hidden="true">07</div>
+              <h2 id="adsense-h">Google AdSense &amp; Advertising</h2>
+            </div>
+            <div class="policy-body">
+              <p>BG Eraser Pro is monetised through <strong>Google AdSense</strong>, an advertising programme operated by Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Google AdSense allows us to display advertisements on the Website, which generates revenue that funds the free operation of the service.</p>
+
+              <h3>How Google AdSense Works</h3>
+              <p>When you visit a page on BG Eraser Pro that contains an AdSense ad unit, Google's servers may set or read advertising cookies on your device to deliver relevant advertisements. These cookies collect information about your browsing behaviour across participating websites to build a profile of your interests and serve targeted advertisements.</p>
+
+              <h3>What Data Google May Collect for Advertising</h3>
+              <ul>
+                <li>Pages you visit on BG Eraser Pro and other AdSense-participating websites.</li>
+                <li>Your approximate geographic location (country and city, derived from IP address).</li>
+                <li>Your device type and browser settings.</li>
+                <li>Interactions with advertisements (impressions, clicks, and conversions).</li>
+                <li>A pseudonymous advertising identifier (the DART cookie described in Section 5).</li>
+              </ul>
+
+              <p>BG Eraser Pro does not pass any personally identifiable information (such as names, email addresses, or image content) to Google AdSense. Google's collection and use of data through AdSense is governed entirely by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.</p>
+
+              <h3>Non-Personalised Advertising</h3>
+              <p>If you are located in the European Economic Area (EEA), the United Kingdom, or Switzerland, or if you have opted out of personalised advertising, Google may serve you <strong>non-personalised advertisements</strong>. These ads are selected based on contextual signals such as the content of the page you are viewing, rather than your personal browsing history. Contextual advertising still uses cookies for basic functionality such as fraud prevention and frequency capping.</p>
+
+              <h3>Your Advertising Choices</h3>
+              <p>You can manage your Google advertising preferences and opt out of personalised ads at any time through the following official resources:</p>
+              <ul>
+                <li><a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google Ads Settings</a> — manage interests and opt out of personalised ads.</li>
+                <li><a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google Ad Personalisation</a> — control how your data is used for advertising.</li>
+                <li><a href="https://optout.aboutads.info/" target="_blank" rel="noopener noreferrer">Digital Advertising Alliance (DAA) Opt-Out</a></li>
+                <li><a href="https://optout.networkadvertising.org/" target="_blank" rel="noopener noreferrer">Network Advertising Initiative (NAI) Opt-Out</a></li>
+                <li><a href="https://www.youronlinechoices.eu/" target="_blank" rel="noopener noreferrer">Your Online Choices (EU)</a></li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- ── 8. DATA RETENTION ── -->
+          <section id="data-retention" class="policy-section" aria-labelledby="retention-h">
+            <div class="policy-section__header">
+              <div class="policy-section__num" aria-hidden="true">08</div>
+              <h2 id="retention-h">Data Retention</h2>
+            </div>
+            <div class="policy-body">
+              <p>BG Eraser Pro retains data only for as long as necessary to fulfil the purposes for which it was collected, to comply with our legal obligations, and to resolve disputes.</p>
+
+              <div class="policy-table-wrap">
+                <table class="policy-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Data Type</th>
+                      <th scope="col">Retention Period</th>
+                      <th scope="col">Reason</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Uploaded Images</strong></td>
+                      <td>Not retained — zero storage</td>
+                      <td>Images are transmitted directly to remove.bg via API and are never stored by BG Eraser Pro.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Processed Result Images</strong></td>
+                      <td>Browser memory only — discarded on tab close</td>
+                      <td>Results are delivered to your browser and are not stored on any BG Eraser Pro server.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Server Log Files</strong></td>
+                      <td>Maximum 90 days</td>
+                      <td>Required for security monitoring and performance diagnostics. Automatically purged thereafter.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Analytics Data (Google Analytics)</strong></td>
+                      <td>26 months (anonymised aggregates)</td>
+                      <td>Used to track long-term usage trends. Governed by Google Analytics' data retention settings.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Advertising Cookies (Google AdSense)</strong></td>
+                      <td>Up to 13 months</td>
+                      <td>Managed by Google LLC per their advertising policies. Users can clear these at any time.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Contact Form Submissions</strong></td>
+                      <td>12 months from receipt</td>
+                      <td>Retained only for the period necessary to respond to your enquiry and resolve any follow-up issues.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── 9. CHILDREN'S PRIVACY ── -->
+          <section id="children" class="policy-section" aria-labelledby="child-h">
+            <div class="policy-section__header">
+              <div class="policy-section__num" aria-hidden="true">09</div>
+              <h2 id="child-h">Children's Privacy</h2>
+            </div>
+            <div class="policy-body">
+              <div class="callout callout--red">
+                <div class="callout__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                </div>
+                <div class="callout__body">
+                  <span class="callout__title">Not Directed at Children Under 13</span>
+                  <p>BG Eraser Pro is not directed at, intended for, or designed to attract children under the age of 13 (or the applicable age of digital consent in your jurisdiction). We do not knowingly collect any personal information from children under 13.</p>
+                </div>
+              </div>
+
+              <p>If you are a parent or legal guardian and you believe your child under 13 has provided us with personal information, please contact us immediately at <a href="mailto:privacy@creativestack.dev">privacy@creativestack.dev</a>. We will take prompt steps to delete such information from our systems.</p>
+
+              <p>For users located in the European Economic Area, the minimum age of digital consent may be higher than 13 in certain member states (up to 16 years). We comply with the applicable local minimum age requirement in the user's jurisdiction.</p>
+            </div>
+          </section>
+
+          <!-- ── 10. GDPR ── -->
+          <section id="gdpr" class="policy-section" aria-labelledby="gdpr-h">
+            <div class="policy-section__header">
+              <div class="policy-section__num" aria-hidden="true">10</div>
+              <h2 id="gdpr-h">GDPR — Your Rights as an EU / EEA Data Subject</h2>
+            </div>
+            <div class="policy-body">
+              <p>If you are located in the European Union (EU), the European Economic Area (EEA), or the United Kingdom (UK), the <strong>General Data Protection Regulation (GDPR)</strong> — and the UK GDPR as retained in UK law — grants you specific rights regarding your personal data. We are committed to upholding these rights fully.</p>
+
+              <h3>Legal Basis for Processing</h3>
+              <p>Where we process personal data (primarily anonymised analytics and advertising data), we rely on the following legal bases under GDPR Article 6:</p>
+              <ul>
+                <li><strong>Legitimate Interests (Art. 6(1)(f)):</strong> Server log analysis for security monitoring and website performance diagnostics.</li>
+                <li><strong>Consent (Art. 6(1)(a)):</strong> Personalised advertising via Google AdSense, where applicable and where consent has been obtained.</li>
+                <li><strong>Contractual Necessity (Art. 6(1)(b)):</strong> Processing your image through the remove.bg API to fulfil the background removal service you requested.</li>
+              </ul>
+
+              <h3>Your GDPR Data Subject Rights</h3>
+              <div class="rights-grid" role="list">
+                <div class="right-card" role="listitem">
+                  <div class="right-card__head">
+                    <div class="right-card__icon" style="background:#eff6ff; color: #2563eb;" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </div>
+                    <h3>Right to Access</h3>
+                  </div>
+                  <p>You have the right to request a copy of the personal data we hold about you and information about how we use it.</p>
+                </div>
+                <div class="right-card" role="listitem">
+                  <div class="right-card__head">
+                    <div class="right-card__icon" style="background:#f0fdf4; color: #16a34a;" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                    </div>
+                    <h3>Right to Rectification</h3>
+                  </div>
+                  <p>You can request correction of any inaccurate or incomplete personal data we hold about you.</p>
+                </div>
+                <div class="right-card" role="listitem">
+                  <div class="right-card__head">
+                    <div class="right-card__icon" style="background:#fef2f2; color: #dc2626;" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                    </div>
+                    <h3>Right to Erasure</h3>
+                  </div>
+                  <p>You may request deletion of your personal data ("the right to be forgotten") where we have no legitimate basis for retaining it.</p>
+                </div>
+                <div class="right-card" role="listitem">
+                  <div class="right-card__head">
+                    <div class="right-card__icon" style="background:#fffbeb; color: #d97706;" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+                    </div>
+                    <h3>Right to Restrict Processing</h3>
+                  </div>
+                  <p>You have the right to request that we restrict the processing of your personal data under certain circumstances.</p>
+                </div>
+                <div class="right-card" role="listitem">
+                  <div class="right-card__head">
+                    <div class="right-card__icon" style="background:#f5f3ff; color: #7c3aed;" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 17 21 12 16 7"/><polyline points="8 7 3 12 8 17"/></svg>
+                    </div>
+                    <h3>Right to Data Portability</h3>
+                  </div>
+                  <p>You can request a machine-readable copy of your personal data to transfer to another service provider.</p>
+                </div>
+                <div class="right-card" role="listitem">
+                  <div class="right-card__head">
+                    <div class="right-card__icon" style="background:#fef3c7; color: #d97706;" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                    </div>
+                    <h3>Right to Object</h3>
+                  </div>
+                  <p>You may object to our processing of your personal data where we rely on legitimate interests as the legal basis.</p>
+                </div>
+                <div class="right-card" role="listitem">
+                  <div class="right-card__head">
+                    <div class="right-card__icon" style="background:#ecfdf5; color: #059669;" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                    </div>
+                    <h3>Withdraw Consent</h3>
+                  </div>
+                  <p>Where processing is based on your consent, you can withdraw that consent at any time without affecting prior processing.</p>
+                </div>
+                <div class="right-card" role="listitem">
+                  <div class="right-card__head">
+                    <div class="right-card__icon" style="background:#f0f9ff; color: #0284c7;" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.8a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 10a16 16 0 0 0 6 6l.27-.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 18v-.91l.92 2.91z"/></svg>
+                    </div>
+                    <h3>Right to Complain</h3>
+                  </div>
+                  <p>You have the right to lodge a complaint with your national Data Protection Authority (DPA) if you believe your rights have been violated.</p>
+                </div>
+              </div>
+
+              <p style="margin-top: 1.5rem;">To exercise any of the above rights, please contact us at <a href="mailto:privacy@creativestack.dev">privacy@creativestack.dev</a>. We will respond to all legitimate requests within <strong>30 days</strong> of receipt. Complex or multiple requests may require up to 90 days, in which case we will notify you within the initial 30-day period.</p>
+            </div>
+          </section>
+
+          <!-- ── 11. CCPA ── -->
+          <section id="ccpa" class="policy-section" aria-labelledby="ccpa-h">
+            <div class="policy-section__header">
+              <div class="policy-section__num" aria-hidden="true">11</div>
+              <h2 id="ccpa-h">CCPA — California Consumer Privacy Rights</h2>
+            </div>
+            <div class="policy-body">
+              <p>If you are a resident of the State of California, USA, you have specific rights under the <strong>California Consumer Privacy Act (CCPA)</strong> and the <strong>California Privacy Rights Act (CPRA)</strong> as amended. This section describes those rights and how to exercise them.</p>
+
+              <h3>Categories of Personal Information Collected</h3>
+              <p>In the preceding 12 months, BG Eraser Pro has collected the following categories of personal information as defined under CCPA:</p>
+              <ul>
+                <li><strong>Identifiers:</strong> IP addresses and anonymous browser identifiers (collected via log files and analytics cookies). Not linked to real-world identity.</li>
+                <li><strong>Internet or Other Electronic Network Activity:</strong> Browsing history on BG Eraser Pro, pages visited, features used, and interactions with advertisements (collected via Google Analytics and AdSense).</li>
+                <li><strong>Geolocation Data:</strong> Approximate geographic location at the city/region level, derived from IP address.</li>
+              </ul>
+
+              <p><strong>We do not collect:</strong> Social Security numbers, financial information, health information, racial or ethnic origin, political opinions, biometric data, communications content, or any sensitive personal information as defined by CCPA.</p>
+
+              <h3>Sale or Sharing of Personal Information</h3>
+              <p>BG Eraser Pro does <strong>not sell</strong> personal information to third parties for monetary consideration. However, under the broad CCPA definition of "sharing" (which includes data shared for cross-context behavioural advertising), Google AdSense's personalised advertising programme may constitute "sharing" under CCPA.</p>
+
+              <h3>Your California Privacy Rights</h3>
+              <ul>
+                <li><strong>Right to Know:</strong> You have the right to request disclosure of the categories and specific pieces of personal information we have collected about you, the sources, the purposes, and the third parties with whom it has been shared.</li>
+                <li><strong>Right to Delete:</strong> You have the right to request deletion of personal information we have collected, subject to certain exceptions permitted by CCPA.</li>
+                <li><strong>Right to Correct:</strong> You have the right to request correction of inaccurate personal information we maintain about you.</li>
+                <li><strong>Right to Opt-Out of Sale/Sharing:</strong> You have the right to opt out of the sale or sharing of your personal information for cross-context behavioural advertising. To opt out of Google's personalised advertising, visit <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google Ad Settings</a>.</li>
+                <li><strong>Right to Limit Use of Sensitive Personal Information:</strong> We do not collect sensitive personal information as defined by CPRA, so this right does not apply.</li>
+                <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any of your CCPA privacy rights. You will receive the same quality of service regardless of whether you exercise these rights.</li>
+              </ul>
+
+              <h3>How to Submit a CCPA Request</h3>
+              <p>To submit a verifiable consumer request under CCPA, you may contact us by email at <a href="mailto:privacy@creativestack.dev">privacy@creativestack.dev</a> with the subject line <strong>"CCPA Privacy Request"</strong>. We will respond to verifiable requests within <strong>45 days</strong>. If we require more time (up to 90 days total), we will inform you of the reason and extension period within the initial 45-day response window.</p>
+
+              <p>You may submit a CCPA request on behalf of a minor child of whom you are the parent or legal guardian.</p>
+            </div>
+          </section>
+
+          <!-- ── 12. SECURITY ── -->
+          <section id="security" class="policy-section" aria-labelledby="security-h">
+            <div class="policy-section__header">
+              <div class="policy-section__num" aria-hidden="true">12</div>
+              <h2 id="security-h">Data Security</h2>
+            </div>
+            <div class="policy-body">
+              <p>The security of your data is important to us. We implement appropriate technical and organisational measures to protect the information we process against unauthorised access, accidental loss, alteration, or disclosure.</p>
+
+              <h3>Security Measures We Implement</h3>
+              <ul>
+                <li><strong>HTTPS Encryption:</strong> All data transmitted between your browser and our Website — including image uploads to the remove.bg API — is protected by TLS (Transport Layer Security) encryption. This prevents interception of data in transit.</li>
+                <li><strong>No Server-Side Image Storage:</strong> The most significant security measure is our architectural decision to never store user images on our infrastructure. There is no database, file system, or cloud storage containing your images, which means there is nothing for an adversary to breach.</li>
+                <li><strong>API Key Security:</strong> Our remove.bg API key is protected and is never exposed in client-side code that would allow unauthorised parties to use it.</li>
+                <li><strong>GitHub Pages CDN:</strong> The Website is served via GitHub's global content delivery network, which includes DDoS protection, security monitoring, and automatic HTTPS certificate management.</li>
+                <li><strong>Third-Party Security:</strong> We rely on established, security-audited third-party services (Google, GitHub, remove.bg) that maintain their own comprehensive security programmes.</li>
+              </ul>
+
+              <div class="callout callout--amber">
+                <div class="callout__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                </div>
+                <div class="callout__body">
+                  <span class="callout__title">Limitation of Liability</span>
+                  <p>While we implement reasonable security measures, no method of transmission over the internet or method of electronic storage is 100% secure. We cannot guarantee absolute security. In the event of a data breach that is likely to result in a risk to your rights and freedoms, we will notify affected parties and relevant supervisory authorities as required by applicable law.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ── 13. CHANGES ── -->
+          <section id="changes" class="policy-section" aria-labelledby="changes-h">
+            <div class="policy-section__header">
+              <div class="policy-section__num" aria-hidden="true">13</div>
+              <h2 id="changes-h">Changes to This Privacy Policy</h2>
+            </div>
+            <div class="policy-body">
+              <p>We reserve the right to update or modify this Privacy Policy at any time to reflect changes in our practices, service features, legal requirements, or regulatory guidance. We are committed to keeping this policy current and transparent.</p>
+
+              <h3>Notification of Changes</h3>
+              <p>When we make material changes to this Privacy Policy, we will:</p>
+              <ul>
+                <li>Update the <strong>"Last updated"</strong> date at the top of this page and in the Website's page header.</li>
+                <li>Post a prominent notice on the BG Eraser Pro homepage for a minimum of 30 days following the change.</li>
+                <li>Where technically feasible and where we have contact information, notify affected users directly.</li>
+              </ul>
+
+              <p>We encourage you to review this Privacy Policy periodically to stay informed about how we are protecting your information. Your continued use of BG Eraser Pro following the posting of changes constitutes your acceptance of those changes.</p>
+
+              <h3>Previous Versions</h3>
+              <p>Previous versions of this Privacy Policy are available upon request. To request a previous version, contact us at <a href="mailto:privacy@creativestack.dev">privacy@creativestack.dev</a> with the subject line <strong>"Privacy Policy — Version Request"</strong>.</p>
+            </div>
+          </section>
+
+          <!-- ── 14. CONTACT / DPO ── -->
+          <section id="contact-dpo" class="policy-section" aria-labelledby="contact-h">
+            <div class="policy-section__header">
+              <div class="policy-section__num" aria-hidden="true">14</div>
+              <h2 id="contact-h">Contact Us &amp; Data Protection Officer</h2>
+            </div>
+            <div class="policy-body">
+              <p>If you have any questions, concerns, or requests regarding this Privacy Policy, the data we hold about you, or your rights under GDPR or CCPA, please contact us using the information below. We take all privacy enquiries seriously and are committed to responding promptly and transparently.</p>
+
+              <div class="contact-block">
+                <h3>BG Eraser Pro — Privacy Contact</h3>
+                <div class="contact-row">
+                  <span class="contact-row__label">Brand</span>
+                  <span>CreativeStack (<code>creativestack-web</code>)</span>
+                </div>
+                <div class="contact-row">
+                  <span class="contact-row__label">Website</span>
+                  <a href="https://creativestack-web.github.io/bg-eraser-pro/" target="_blank" rel="noopener noreferrer">creativestack-web.github.io/bg-eraser-pro</a>
+                </div>
+                <div class="contact-row">
+                  <span class="contact-row__label">Privacy Email</span>
+                  <a href="mailto:privacy@creativestack.dev">privacy@creativestack.dev</a>
+                </div>
+                <div class="contact-row">
+                  <span class="contact-row__label">General Email</span>
+                  <a href="mailto:hello@creativestack.dev">hello@creativestack.dev</a>
+                </div>
+                <div class="contact-row">
+                  <span class="contact-row__label">GitHub</span>
+                  <a href="https://github.com/creativestack-web" target="_blank" rel="noopener noreferrer">github.com/creativestack-web</a>
+                </div>
+                <div class="contact-row">
+                  <span class="contact-row__label">Response SLA</span>
+                  <span>Within 5 business days for general enquiries; within 30 days for GDPR requests; within 45 days for CCPA requests.</span>
+                </div>
+              </div>
+
+              <p style="margin-top: 1.5rem;">For enquiries related to the <strong>remove.bg API's</strong> handling of your image data, please contact Kaleido AI GmbH directly at <a href="https://www.remove.bg/contact" target="_blank" rel="noopener noreferrer">https://www.remove.bg/contact</a>.</p>
+
+              <p>For enquiries related to <strong>Google AdSense and advertising cookies</strong>, please contact Google LLC at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a> or via <a href="https://support.google.com/adsense" target="_blank" rel="noopener noreferrer">Google AdSense Support</a>.</p>
+
+              <p>EU/EEA residents may also raise concerns directly with their national data protection authority. A full list of EU data protection authorities is available at <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank" rel="noopener noreferrer">edpb.europa.eu</a>. UK residents may contact the <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer">Information Commissioner's Office (ICO)</a>.</p>
+            </div>
+          </section>
+
+        </article><!-- /.policy-content -->
+      </div><!-- /.policy-layout -->
+    </div><!-- /.container -->
+  </main>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <a href="index.html" class="footer__logo" aria-label="BG Eraser Pro — Home">
+        <div class="nav__logo-gem" style="width:28px;height:28px;font-size:0.75rem;" aria-hidden="true">✦</div>
+        BG<em>Eraser</em>&nbsp;Pro
+      </a>
+
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="index.html">Tool</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html" class="active" aria-current="page">Privacy Policy</a>
+      </nav>
+
+      <p class="footer__legal">
+        &copy; <span id="footerYr"></span> BG Eraser Pro by
+        <a href="https://github.com/creativestack-web" target="_blank" rel="noopener noreferrer">CreativeStack</a>.
+        Background removal powered by
+        <a href="https://www.remove.bg" target="_blank" rel="noopener noreferrer">remove.bg</a>.
+        All rights reserved. &nbsp;|&nbsp;
+        This privacy policy was drafted in compliance with GDPR (EU) 2016/679, the California Consumer Privacy Act (CCPA), and Google AdSense programme policies.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    /* ─── Footer Year ─── */
+    document.getElementById('footerYr').textContent = new Date().getFullYear();
+
+    /* ─── Mobile Navigation ─── */
+    const burger = document.getElementById('burgerBtn');
+    const drawer = document.getElementById('navDrawer');
+
+    burger.addEventListener('click', () => {
+      const isOpen = drawer.classList.toggle('open');
+      burger.setAttribute('aria-expanded', String(isOpen));
+      drawer.setAttribute('aria-hidden',   String(!isOpen));
+    });
+    drawer.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        drawer.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+        drawer.setAttribute('aria-hidden', 'true');
+      });
+    });
+
+    /* ─── TOC Scroll Spy ─── */
+    (function initTocSpy() {
+      const links    = document.querySelectorAll('.toc-link');
+      const sections = [];
+
+      links.forEach(link => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) sections.push({ link, target });
+      });
+
+      if (!sections.length) return;
+
+      const navHeight = parseInt(
+        getComputedStyle(document.documentElement).getPropertyValue('--nav-h')
+      ) || 66;
+
+      function updateActive() {
+        let current = sections[0];
+        sections.forEach(({ link, target }) => {
+          if (target.getBoundingClientRect().top <= navHeight + 80) {
+            current = { link, target };
+          }
+        });
+        links.forEach(l => l.classList.remove('toc-active'));
+        if (current) current.link.classList.add('toc-active');
+      }
+
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    })();
+
+    /* ─── Smooth scroll (honour sticky header) ─── */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const id     = this.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        if (!target) return;
+        e.preventDefault();
+        const navH = parseInt(
+          getComputedStyle(document.documentElement).getPropertyValue('--nav-h')
+        ) || 66;
+        const top = target.getBoundingClientRect().top + window.scrollY - navH - 16;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
