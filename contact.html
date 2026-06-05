@@ -1,0 +1,2309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact Us — BG Eraser Pro | CreativeStack Support</title>
+  <meta name="description" content="Get in touch with the BG Eraser Pro team. Reach out for technical support, feature requests, business inquiries, or advertising partnerships. We respond within 24–48 hours." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://creativestack-web.github.io/bg-eraser-pro/contact.html" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://creativestack-web.github.io/bg-eraser-pro/contact.html" />
+  <meta property="og:title"       content="Contact Us — BG Eraser Pro" />
+  <meta property="og:description" content="Reach the BG Eraser Pro team for support, feature requests, or business inquiries." />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ═══════════════════════════════════════════════════
+       DESIGN TOKENS
+    ═══════════════════════════════════════════════════ */
+    :root {
+      /* Colour palette */
+      --white:         #ffffff;
+      --canvas:        #f8fafc;
+      --surface:       #f1f5f9;
+      --surface-2:     #e8edf5;
+      --rule:          #e2e8f0;
+      --rule-2:        #cbd5e1;
+
+      --ink:           #0f172a;
+      --ink-2:         #1e293b;
+      --ink-3:         #334155;
+      --muted:         #64748b;
+      --muted-2:       #94a3b8;
+      --muted-3:       #cbd5e1;
+
+      --accent:        #3b5bdb;
+      --accent-hover:  #2f4cc4;
+      --accent-light:  #eef2ff;
+      --accent-mid:    #c5d0f5;
+      --accent-text:   #2f4cc4;
+      --accent-glow:   rgba(59, 91, 219, 0.18);
+
+      --green:         #16a34a;
+      --green-light:   #f0fdf4;
+      --green-mid:     #bbf7d0;
+      --green-text:    #15803d;
+
+      --amber:         #d97706;
+      --amber-light:   #fffbeb;
+      --amber-mid:     #fde68a;
+
+      /* Typography */
+      --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+      --font-body:    'DM Sans', ui-sans-serif, -apple-system, BlinkMacSystemFont,
+                      'Segoe UI', system-ui, Helvetica, Arial, sans-serif;
+      --font-mono:    ui-monospace, 'Cascadia Code', 'Fira Code', 'Courier New', monospace;
+
+      /* Spacing */
+      --sp-1:  0.25rem;
+      --sp-2:  0.5rem;
+      --sp-3:  0.75rem;
+      --sp-4:  1rem;
+      --sp-5:  1.25rem;
+      --sp-6:  1.5rem;
+      --sp-8:  2rem;
+      --sp-10: 2.5rem;
+      --sp-12: 3rem;
+      --sp-16: 4rem;
+      --sp-20: 5rem;
+
+      /* Radii */
+      --r-xs:  0.25rem;
+      --r-sm:  0.5rem;
+      --r-md:  0.75rem;
+      --r-lg:  1rem;
+      --r-xl:  1.375rem;
+      --r-2xl: 1.75rem;
+      --r-3xl: 2.25rem;
+
+      /* Shadows */
+      --shadow-xs: 0 1px 2px rgba(15,23,42,0.05);
+      --shadow-sm: 0 1px 6px rgba(15,23,42,0.07), 0 2px 10px rgba(15,23,42,0.04);
+      --shadow-md: 0 4px 20px rgba(15,23,42,0.09), 0 2px 8px rgba(15,23,42,0.05);
+      --shadow-lg: 0 12px 40px rgba(15,23,42,0.11), 0 4px 16px rgba(15,23,42,0.06);
+      --shadow-accent: 0 4px 24px rgba(59,91,219,0.28);
+      --shadow-focus: 0 0 0 3px rgba(59,91,219,0.22);
+
+      /* Motion */
+      --ease:   cubic-bezier(0.4, 0, 0.2, 1);
+      --t-fast: 0.14s var(--ease);
+      --t-med:  0.26s var(--ease);
+      --t-slow: 0.42s var(--ease);
+
+      /* Layout */
+      --nav-h:       66px;
+      --container:   1100px;
+      --form-col:    560px;
+      --sidebar-col: 340px;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       RESET & BASE
+    ═══════════════════════════════════════════════════ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+    body {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--ink-3);
+      background: var(--canvas);
+      min-height: 100vh;
+    }
+    img  { display: block; max-width: 100%; }
+    a    { color: var(--accent); text-decoration: none; transition: color var(--t-fast); }
+    a:hover { color: var(--accent-hover); }
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: var(--r-sm);
+    }
+
+    /* ═══════════════════════════════════════════════════
+       CONTAINER
+    ═══════════════════════════════════════════════════ */
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 var(--sp-6);
+    }
+
+    /* ═══════════════════════════════════════════════════
+       NAVIGATION
+    ═══════════════════════════════════════════════════ */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--rule);
+      box-shadow: var(--shadow-xs);
+    }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    /* Logo */
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+      flex-shrink: 0;
+    }
+    .nav__logo-gem {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, var(--accent) 0%, #6ea8fe 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.85rem;
+      box-shadow: 0 3px 12px rgba(59,91,219,0.38);
+      flex-shrink: 0;
+      user-select: none;
+    }
+    .nav__logo em {
+      color: var(--accent);
+      font-style: normal;
+    }
+
+    /* Nav links */
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-6);
+    }
+    .nav__links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color var(--t-fast);
+      white-space: nowrap;
+    }
+    .nav__links a:hover { color: var(--ink); }
+    .nav__links a.active {
+      color: var(--accent-text);
+      font-weight: 600;
+    }
+
+    /* CTA */
+    .nav__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      background: var(--accent);
+      color: #fff !important;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.48rem 1.1rem;
+      border-radius: var(--r-md);
+      text-decoration: none !important;
+      transition: background var(--t-fast), transform var(--t-fast), box-shadow var(--t-fast);
+      box-shadow: 0 2px 10px rgba(59,91,219,0.32);
+      white-space: nowrap;
+    }
+    .nav__cta:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-accent);
+    }
+
+    /* Back to home link (left side) */
+    .nav__back {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.4rem 0.85rem;
+      border-radius: var(--r-md);
+      border: 1px solid var(--rule);
+      background: var(--white);
+      transition: color var(--t-fast), border-color var(--t-fast),
+                  background var(--t-fast), transform var(--t-fast),
+                  box-shadow var(--t-fast);
+      box-shadow: var(--shadow-xs);
+    }
+    .nav__back:hover {
+      color: var(--accent-text);
+      border-color: var(--accent-mid);
+      background: var(--accent-light);
+      transform: translateX(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+    .nav__back svg { flex-shrink: 0; }
+
+    /* Burger */
+    .nav__burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      margin-left: var(--sp-3);
+    }
+    .nav__burger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--ink-3);
+      border-radius: 2px;
+      transition: transform var(--t-fast), opacity var(--t-fast);
+    }
+    .nav__burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav__burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .nav__burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Drawer */
+    .nav__drawer {
+      display: none;
+      position: absolute;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--rule);
+      box-shadow: var(--shadow-md);
+      padding: var(--sp-5) var(--sp-6) var(--sp-6);
+      z-index: 190;
+    }
+    .nav__drawer.open { display: block; }
+    .nav__drawer a {
+      display: block;
+      font-size: 0.975rem;
+      font-weight: 500;
+      color: var(--ink-3);
+      text-decoration: none;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--rule);
+      transition: color var(--t-fast);
+    }
+    .nav__drawer a:last-child { border-bottom: none; padding-bottom: 0; }
+    .nav__drawer a:hover { color: var(--accent); }
+    .nav__drawer a.active { color: var(--accent-text); font-weight: 600; }
+
+    /* ═══════════════════════════════════════════════════
+       BREADCRUMB BAR
+    ═══════════════════════════════════════════════════ */
+    .breadcrumb-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--rule);
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-2);
+      padding: var(--sp-3) 0;
+      font-size: 0.8rem;
+      color: var(--muted-2);
+    }
+    .breadcrumb a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb__sep     { user-select: none; }
+    .breadcrumb__current { color: var(--muted); }
+
+    /* ═══════════════════════════════════════════════════
+       PAGE HERO
+    ═══════════════════════════════════════════════════ */
+    .page-hero {
+      background: linear-gradient(160deg, var(--white) 0%, var(--canvas) 55%, #eef2ff 100%);
+      border-bottom: 1px solid var(--rule);
+      padding: var(--sp-16) 0 var(--sp-12);
+      position: relative;
+      overflow: hidden;
+    }
+    /* Decorative blobs */
+    .page-hero::before,
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .page-hero::before {
+      width: 600px; height: 600px;
+      top: -280px; right: -180px;
+      background: radial-gradient(circle, rgba(59,91,219,0.07) 0%, transparent 65%);
+    }
+    .page-hero::after {
+      width: 400px; height: 400px;
+      bottom: -200px; left: -120px;
+      background: radial-gradient(circle, rgba(99,102,241,0.06) 0%, transparent 60%);
+    }
+
+    .page-hero__inner {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+    }
+    .page-hero__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-text);
+      background: var(--accent-light);
+      border: 1px solid var(--accent-mid);
+      padding: 0.3rem 0.9rem;
+      border-radius: 100px;
+      margin-bottom: var(--sp-5);
+    }
+    .page-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: var(--sp-4);
+    }
+    .page-hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .page-hero__sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 560px;
+      line-height: 1.8;
+      margin-bottom: var(--sp-6);
+    }
+    /* Response time badge */
+    .response-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      background: var(--green-light);
+      border: 1px solid var(--green-mid);
+      color: var(--green-text);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.35rem 0.9rem;
+      border-radius: 100px;
+    }
+    .response-badge__dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 3px rgba(22,163,74,0.2);
+      animation: pulse-dot 2.2s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { box-shadow: 0 0 0 3px rgba(22,163,74,0.2); }
+      50%       { box-shadow: 0 0 0 6px rgba(22,163,74,0.08); }
+    }
+
+    /* ═══════════════════════════════════════════════════
+       MAIN CONTENT — TWO COLUMN LAYOUT
+    ═══════════════════════════════════════════════════ */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: var(--sidebar-col) var(--form-col);
+      gap: var(--sp-10);
+      align-items: start;
+      padding: var(--sp-16) 0 var(--sp-20);
+      justify-content: center;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       SIDEBAR — CONTACT INFO
+    ═══════════════════════════════════════════════════ */
+    .contact-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-5);
+      position: sticky;
+      top: calc(var(--nav-h) + var(--sp-8));
+    }
+
+    /* Section label */
+    .sidebar-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted-2);
+      margin-bottom: var(--sp-1);
+    }
+
+    /* ── Primary email card ── */
+    .email-card {
+      background: var(--white);
+      border: 1.5px solid var(--accent-mid);
+      border-radius: var(--r-2xl);
+      padding: var(--sp-6);
+      box-shadow: var(--shadow-md), 0 0 0 4px rgba(59,91,219,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+    .email-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), #818cf8, #38bdf8);
+      border-radius: var(--r-2xl) var(--r-2xl) 0 0;
+    }
+    .email-card__header {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+      margin-bottom: var(--sp-4);
+    }
+    .email-card__icon {
+      width: 42px; height: 42px;
+      border-radius: var(--r-md);
+      background: var(--accent-light);
+      border: 1px solid var(--accent-mid);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .email-card__title {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+    .email-card__subtitle {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: var(--sp-1);
+    }
+
+    /* Email address display */
+    .email-address {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+      background: var(--canvas);
+      border: 1px solid var(--rule-2);
+      border-radius: var(--r-lg);
+      padding: var(--sp-3) var(--sp-4);
+      margin-bottom: var(--sp-4);
+    }
+    .email-address__icon {
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .email-address__text {
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--ink-2);
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .copy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-1);
+      font-size: 0.72rem;
+      font-weight: 600;
+      font-family: var(--font-body);
+      color: var(--muted);
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-sm);
+      padding: 0.25rem 0.6rem;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: color var(--t-fast), background var(--t-fast), border-color var(--t-fast);
+    }
+    .copy-btn:hover {
+      color: var(--accent-text);
+      background: var(--accent-light);
+      border-color: var(--accent-mid);
+    }
+    .copy-btn.copied {
+      color: var(--green-text);
+      background: var(--green-light);
+      border-color: var(--green-mid);
+    }
+
+    .email-cta {
+      display: block;
+      text-align: center;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.7rem 1.2rem;
+      border-radius: var(--r-lg);
+      text-decoration: none;
+      transition: background var(--t-fast), transform var(--t-fast), box-shadow var(--t-fast);
+      box-shadow: 0 2px 10px rgba(59,91,219,0.3);
+    }
+    .email-cta:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-accent);
+      color: #fff;
+    }
+
+    /* ── Contact info cards ── */
+    .info-card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-xl);
+      padding: var(--sp-5);
+      box-shadow: var(--shadow-xs);
+      transition: border-color var(--t-med), box-shadow var(--t-med);
+    }
+    .info-card:hover {
+      border-color: var(--accent-mid);
+      box-shadow: var(--shadow-sm);
+    }
+    .info-card__row {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--sp-4);
+    }
+    .info-card__icon {
+      width: 36px; height: 36px;
+      border-radius: var(--r-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .info-card__body { flex: 1; min-width: 0; }
+    .info-card__label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted-2);
+      margin-bottom: var(--sp-1);
+    }
+    .info-card__value {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--ink-2);
+      line-height: 1.5;
+    }
+    .info-card__note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: var(--sp-1);
+      line-height: 1.5;
+    }
+
+    /* ── Type selector pills ── */
+    .inquiry-types {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-xl);
+      padding: var(--sp-5);
+      box-shadow: var(--shadow-xs);
+    }
+    .inquiry-types__title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted-2);
+      margin-bottom: var(--sp-3);
+    }
+    .inquiry-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--sp-2);
+    }
+    .inquiry-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-1);
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 0.3rem 0.75rem;
+      border-radius: 100px;
+      border: 1px solid var(--rule);
+      background: var(--surface);
+      color: var(--muted);
+      user-select: none;
+    }
+
+    /* ── Social / links block ── */
+    .social-block {
+      background: var(--ink);
+      border-radius: var(--r-xl);
+      padding: var(--sp-5);
+    }
+    .social-block__title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: var(--sp-4);
+    }
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-2);
+    }
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--r-lg);
+      padding: var(--sp-3) var(--sp-4);
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: background var(--t-fast), border-color var(--t-fast), color var(--t-fast);
+    }
+    .social-link:hover {
+      background: rgba(255,255,255,0.11);
+      border-color: rgba(255,255,255,0.2);
+      color: #fff;
+    }
+    .social-link__icon {
+      width: 28px; height: 28px;
+      border-radius: var(--r-sm);
+      background: rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .social-link__text { flex: 1; min-width: 0; }
+    .social-link__label { display: block; font-size: 0.82rem; font-weight: 600; }
+    .social-link__sub   { display: block; font-size: 0.74rem; color: rgba(255,255,255,0.4); }
+
+    /* ═══════════════════════════════════════════════════
+       CONTACT FORM PANEL
+    ═══════════════════════════════════════════════════ */
+    .form-panel {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-3xl);
+      padding: var(--sp-10);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+    /* Subtle top accent bar */
+    .form-panel::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent) 0%, #818cf8 50%, #38bdf8 100%);
+    }
+
+    .form-panel__header {
+      margin-bottom: var(--sp-8);
+    }
+    .form-panel__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-text);
+      background: var(--accent-light);
+      border: 1px solid var(--accent-mid);
+      padding: 0.28rem 0.8rem;
+      border-radius: 100px;
+      margin-bottom: var(--sp-4);
+    }
+    .form-panel h2 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      margin-bottom: var(--sp-2);
+    }
+    .form-panel__sub {
+      font-size: 0.925rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ── Form fields ── */
+    .contact-form { display: flex; flex-direction: column; gap: var(--sp-5); }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-2);
+    }
+    .field-group--row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-4);
+    }
+
+    .field-label {
+      font-size: 0.825rem;
+      font-weight: 600;
+      color: var(--ink-2);
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: var(--sp-1);
+    }
+    .field-required {
+      color: #ef4444;
+      font-size: 0.75rem;
+      line-height: 1;
+    }
+    .field-hint {
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: var(--muted-2);
+      margin-left: auto;
+    }
+
+    /* Input wrapper (for icon inside inputs) */
+    .input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .input-wrap__icon {
+      position: absolute;
+      left: var(--sp-4);
+      color: var(--muted-2);
+      pointer-events: none;
+      transition: color var(--t-fast);
+      display: flex;
+      align-items: center;
+    }
+    .input-wrap:focus-within .input-wrap__icon {
+      color: var(--accent);
+    }
+
+    /* Base input & textarea */
+    .field-input,
+    .field-textarea,
+    .field-select {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 0.925rem;
+      color: var(--ink-2);
+      background: var(--canvas);
+      border: 1.5px solid var(--rule-2);
+      border-radius: var(--r-lg);
+      padding: 0.75rem var(--sp-4);
+      transition: border-color var(--t-fast), box-shadow var(--t-fast),
+                  background var(--t-fast);
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+      line-height: 1.5;
+    }
+    /* Inputs with leading icon get left padding */
+    .input-wrap .field-input,
+    .input-wrap .field-select {
+      padding-left: 2.75rem;
+    }
+    .field-input::placeholder,
+    .field-textarea::placeholder {
+      color: var(--muted-3);
+      font-weight: 400;
+    }
+    .field-input:hover,
+    .field-textarea:hover,
+    .field-select:hover {
+      border-color: var(--rule);
+      background: var(--white);
+    }
+    .field-input:focus,
+    .field-textarea:focus,
+    .field-select:focus {
+      border-color: var(--accent);
+      background: var(--white);
+      box-shadow: var(--shadow-focus);
+      outline: none;
+    }
+
+    /* Textarea specific */
+    .field-textarea {
+      resize: vertical;
+      min-height: 148px;
+      max-height: 380px;
+      line-height: 1.7;
+    }
+
+    /* Select specific */
+    .field-select {
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.9rem center;
+      padding-right: 2.5rem;
+    }
+
+    /* ── Character counter ── */
+    .char-counter {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 0.72rem;
+      color: var(--muted-2);
+      margin-top: calc(-1 * var(--sp-1));
+      font-variant-numeric: tabular-nums;
+    }
+    .char-counter.warn  { color: var(--amber); }
+    .char-counter.limit { color: #ef4444; }
+
+    /* ── Consent checkbox ── */
+    .consent-row {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--sp-3);
+    }
+    .consent-check {
+      width: 18px; height: 18px;
+      border-radius: var(--r-xs);
+      border: 1.5px solid var(--rule-2);
+      background: var(--canvas);
+      cursor: pointer;
+      flex-shrink: 0;
+      margin-top: 3px;
+      accent-color: var(--accent);
+      transition: border-color var(--t-fast);
+    }
+    .consent-check:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .consent-label {
+      font-size: 0.825rem;
+      color: var(--muted);
+      line-height: 1.65;
+      cursor: pointer;
+    }
+    .consent-label a { color: var(--accent); font-weight: 500; }
+
+    /* ── Divider ── */
+    .form-divider {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-4);
+      color: var(--muted-2);
+      font-size: 0.78rem;
+      font-weight: 500;
+    }
+    .form-divider::before,
+    .form-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    /* ── Submit button ── */
+    .submit-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--sp-3);
+      width: 100%;
+      background: linear-gradient(135deg, var(--accent) 0%, #5b6bdb 60%, #818cf8 100%);
+      background-size: 200% auto;
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0.9rem 1.75rem;
+      border: none;
+      border-radius: var(--r-xl);
+      cursor: pointer;
+      transition: background-position var(--t-med), transform var(--t-fast),
+                  box-shadow var(--t-fast), opacity var(--t-fast);
+      box-shadow: 0 4px 20px rgba(59,91,219,0.38);
+      letter-spacing: -0.01em;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Glare sweep animation */
+    .submit-btn::after {
+      content: '';
+      position: absolute;
+      top: -50%; left: -75%;
+      width: 50%; height: 200%;
+      background: linear-gradient(105deg, transparent, rgba(255,255,255,0.15), transparent);
+      transform: skewX(-20deg);
+      transition: left 0.55s ease;
+      pointer-events: none;
+    }
+    .submit-btn:hover::after { left: 125%; }
+    .submit-btn:hover {
+      background-position: right center;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(59,91,219,0.48);
+    }
+    .submit-btn:active { transform: scale(0.98); }
+    .submit-btn:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+    .submit-btn svg { flex-shrink: 0; }
+
+    /* Submit footer note */
+    .submit-note {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--muted-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--sp-2);
+      margin-top: var(--sp-3);
+    }
+    .submit-note svg { color: var(--green); }
+
+    /* ── Success state ── */
+    .form-success {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: var(--sp-8) var(--sp-6);
+      animation: fadeUp 0.4s ease both;
+    }
+    .form-success.visible { display: flex; }
+    .success-icon {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: var(--green-light);
+      border: 2px solid var(--green-mid);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green);
+      margin-bottom: var(--sp-6);
+      font-size: 1.8rem;
+      box-shadow: 0 0 0 8px rgba(22,163,74,0.08);
+    }
+    .form-success h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      margin-bottom: var(--sp-3);
+    }
+    .form-success p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 380px;
+      line-height: 1.75;
+      margin-bottom: var(--sp-6);
+    }
+    .reset-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      font-size: 0.875rem;
+      font-weight: 600;
+      font-family: var(--font-body);
+      color: var(--accent-text);
+      background: var(--accent-light);
+      border: 1px solid var(--accent-mid);
+      border-radius: var(--r-lg);
+      padding: 0.6rem 1.25rem;
+      cursor: pointer;
+      transition: background var(--t-fast), border-color var(--t-fast), transform var(--t-fast);
+    }
+    .reset-btn:hover {
+      background: #dde4ff;
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    /* ── Error message ── */
+    .field-error {
+      font-size: 0.78rem;
+      color: #ef4444;
+      display: flex;
+      align-items: center;
+      gap: var(--sp-1);
+      display: none;
+    }
+    .field-error.visible { display: flex; }
+    .field-group.has-error .field-input,
+    .field-group.has-error .field-textarea,
+    .field-group.has-error .field-select {
+      border-color: #fca5a5;
+      background: #fff5f5;
+    }
+    .field-group.has-error .field-input:focus,
+    .field-group.has-error .field-textarea:focus {
+      border-color: #ef4444;
+      box-shadow: 0 0 0 3px rgba(239,68,68,0.15);
+    }
+
+    /* ═══════════════════════════════════════════════════
+       FAQ STRIP
+    ═══════════════════════════════════════════════════ */
+    .faq-strip {
+      background: var(--surface);
+      border-top: 1px solid var(--rule);
+      padding: var(--sp-16) 0;
+    }
+    .faq-strip__header {
+      text-align: center;
+      margin-bottom: var(--sp-10);
+    }
+    .faq-strip__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-text);
+      background: var(--accent-light);
+      border: 1px solid var(--accent-mid);
+      padding: 0.28rem 0.8rem;
+      border-radius: 100px;
+      margin-bottom: var(--sp-4);
+    }
+    .faq-strip h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.025em;
+      margin-bottom: var(--sp-3);
+    }
+    .faq-strip__sub { font-size: 0.95rem; color: var(--muted); }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--sp-4);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      transition: border-color var(--t-med), box-shadow var(--t-med);
+    }
+    .faq-item:hover {
+      border-color: var(--accent-mid);
+      box-shadow: var(--shadow-sm);
+    }
+    .faq-item[open] {
+      border-color: var(--accent-mid);
+      box-shadow: var(--shadow-sm), 0 0 0 1px rgba(59,91,219,0.06);
+    }
+    .faq-q {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--sp-4);
+      padding: var(--sp-5) var(--sp-6);
+      cursor: pointer;
+      list-style: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--ink-2);
+      transition: color var(--t-fast);
+      user-select: none;
+    }
+    .faq-q::-webkit-details-marker { display: none; }
+    .faq-q:hover { color: var(--accent-text); }
+    .faq-chevron {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--surface);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      color: var(--muted-2);
+      transition: transform var(--t-med), background var(--t-fast), color var(--t-fast);
+    }
+    .faq-item[open] .faq-q { color: var(--accent-text); }
+    .faq-item[open] .faq-chevron {
+      transform: rotate(180deg);
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+    .faq-a {
+      padding: 0 var(--sp-6) var(--sp-5);
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.75;
+      animation: fadeDown 0.25s ease both;
+    }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ═══════════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════════ */
+    .footer {
+      background: var(--white);
+      border-top: 1px solid var(--rule);
+      padding: var(--sp-10) 0;
+    }
+    .footer__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--sp-5);
+      text-align: center;
+    }
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .footer__logo em { color: var(--accent); font-style: normal; }
+    .footer__nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--sp-5);
+    }
+    .footer__nav a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color var(--t-fast);
+    }
+    .footer__nav a:hover { color: var(--accent); }
+    .footer__nav a.active { color: var(--accent-text); }
+    .footer__legal {
+      font-size: 0.78rem;
+      color: var(--muted-2);
+      max-width: 580px;
+      line-height: 1.65;
+    }
+    .footer__legal a { color: var(--muted); }
+    .footer__legal a:hover { color: var(--accent); }
+
+    /* ═══════════════════════════════════════════════════
+       ANIMATIONS
+    ═══════════════════════════════════════════════════ */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .page-hero__eyebrow { animation: fadeUp 0.4s ease both; }
+    .page-hero h1       { animation: fadeUp 0.45s 0.07s ease both; }
+    .page-hero__sub     { animation: fadeUp 0.45s 0.13s ease both; }
+    .response-badge     { animation: fadeUp 0.45s 0.19s ease both; }
+
+    /* ═══════════════════════════════════════════════════
+       RESPONSIVE — ≤ 1000px
+    ═══════════════════════════════════════════════════ */
+    @media (max-width: 1000px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+        max-width: 620px;
+        margin: 0 auto;
+        padding-top: var(--sp-10);
+      }
+      .contact-sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--sp-4);
+      }
+      /* Email card spans full width on sidebar grid */
+      .email-card { grid-column: 1 / -1; }
+      .social-block { grid-column: 1 / -1; }
+
+      .faq-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ═══════════════════════════════════════════════════
+       RESPONSIVE — ≤ 640px (mobile)
+    ═══════════════════════════════════════════════════ */
+    @media (max-width: 640px) {
+      :root { --nav-h: 62px; }
+
+      /* Nav */
+      .nav__links  { display: none; }
+      .nav__cta    { display: none; }
+      .nav__burger { display: flex; }
+
+      /* Hero */
+      .page-hero { padding: var(--sp-10) 0 var(--sp-8); }
+      .page-hero h1 { font-size: 1.85rem; }
+
+      /* Sidebar stacks to single col */
+      .contact-sidebar { grid-template-columns: 1fr; }
+
+      /* Form panel */
+      .form-panel { padding: var(--sp-6) var(--sp-5); border-radius: var(--r-2xl); }
+      .field-group--row { grid-template-columns: 1fr; }
+
+      /* FAQ */
+      .faq-strip { padding: var(--sp-10) 0; }
+    }
+
+    @media (max-width: 400px) {
+      .container    { padding: 0 var(--sp-4); }
+      .form-panel   { padding: var(--sp-5) var(--sp-4); }
+      .submit-btn   { font-size: 0.9rem; padding: 0.85rem 1.25rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav__inner">
+
+      <!-- Back to home (left side) -->
+      <a href="index.html" class="nav__back" aria-label="Back to BG Eraser Pro home">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2.2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="19" y1="12" x2="5" y2="12"/>
+          <polyline points="12 19 5 12 12 5"/>
+        </svg>
+        Back to Home
+      </a>
+
+      <!-- Logo (centre) -->
+      <a href="index.html" class="nav__logo" aria-label="BG Eraser Pro — Home">
+        <div class="nav__logo-gem" aria-hidden="true">✦</div>
+        BG<em>Eraser</em>&nbsp;Pro
+      </a>
+
+      <!-- Nav links (right side) -->
+      <div class="nav__links">
+        <a href="index.html">Tool</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active" aria-current="page">Contact</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="index.html" class="nav__cta">Remove BG Free →</a>
+      </div>
+
+      <!-- Mobile burger -->
+      <button class="nav__burger" id="burgerBtn"
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+              aria-controls="navDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile nav drawer -->
+    <div class="nav__drawer" id="navDrawer" aria-hidden="true">
+      <a href="index.html">Tool</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       BREADCRUMB
+  ══════════════════════════════════════ -->
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <span class="breadcrumb__current" aria-current="page">Contact Us</span>
+      </nav>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ══════════════════════════════════════
+         PAGE HERO
+    ══════════════════════════════════════ -->
+    <section class="page-hero" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="page-hero__inner">
+          <div class="page-hero__eyebrow" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            Get in Touch
+          </div>
+
+          <h1 id="contact-heading">
+            We're Here to <em>Help</em>
+          </h1>
+
+          <p class="page-hero__sub">
+            Have a question about BG Eraser Pro? Need technical support, want to suggest a
+            feature, or interested in a business partnership? We'd love to hear from you.
+            Fill out the form or email us directly — we read every message.
+          </p>
+
+          <div class="response-badge" aria-label="Typical response time">
+            <div class="response-badge__dot" aria-hidden="true"></div>
+            Typical response within 24–48 hours
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         CONTACT LAYOUT
+    ══════════════════════════════════════ -->
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- ─── SIDEBAR ─── -->
+        <aside class="contact-sidebar" aria-label="Contact information">
+
+          <!-- Primary email card -->
+          <div class="email-card" role="region" aria-label="Direct email support">
+            <div class="email-card__header">
+              <div class="email-card__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div>
+                <div class="email-card__title">Direct Email Support</div>
+                <div class="email-card__subtitle">For all enquiries — fastest response guaranteed</div>
+              </div>
+            </div>
+
+            <!-- Email address row with copy button -->
+            <div class="email-address" role="group" aria-label="Support email address">
+              <div class="email-address__icon" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="4"/>
+                  <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"/>
+                </svg>
+              </div>
+              <span class="email-address__text" id="emailAddr">
+                support.creativestack@gmail.com
+              </span>
+              <button class="copy-btn" id="copyBtn"
+                      aria-label="Copy email address to clipboard">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.2"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                </svg>
+                Copy
+              </button>
+            </div>
+
+            <a href="mailto:support.creativestack@gmail.com" class="email-cta"
+               aria-label="Send email to support.creativestack@gmail.com">
+              Send an Email →
+            </a>
+          </div>
+
+          <!-- Response time info card -->
+          <div class="info-card">
+            <div class="info-card__row">
+              <div class="info-card__icon"
+                   style="background: #f0fdf4; color: #16a34a;"
+                   aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </div>
+              <div class="info-card__body">
+                <div class="info-card__label">Response Time</div>
+                <div class="info-card__value">24 – 48 hours</div>
+                <div class="info-card__note">Mon – Fri, excluding public holidays</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Brand info card -->
+          <div class="info-card">
+            <div class="info-card__row">
+              <div class="info-card__icon"
+                   style="background: var(--accent-light); color: var(--accent);"
+                   aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                  <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+              </div>
+              <div class="info-card__body">
+                <div class="info-card__label">Published by</div>
+                <div class="info-card__value">CreativeStack</div>
+                <div class="info-card__note">
+                  <code style="font-family: var(--font-mono); font-size:0.78rem;">creativestack-web</code>
+                  on GitHub
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inquiry types -->
+          <div class="inquiry-types">
+            <div class="inquiry-types__title">We can help with</div>
+            <div class="inquiry-pills" role="list">
+              <span class="inquiry-pill" role="listitem">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="12" y1="8" x2="12" y2="12"/>
+                  <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+                Technical Support
+              </span>
+              <span class="inquiry-pill" role="listitem">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+                Feature Requests
+              </span>
+              <span class="inquiry-pill" role="listitem">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                </svg>
+                Business Inquiries
+              </span>
+              <span class="inquiry-pill" role="listitem">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                Privacy Questions
+              </span>
+              <span class="inquiry-pill" role="listitem">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+                Advertising
+              </span>
+              <span class="inquiry-pill" role="listitem">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"/>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+                Bug Reports
+              </span>
+            </div>
+          </div>
+
+          <!-- Social / links -->
+          <div class="social-block" aria-label="External links">
+            <div class="social-block__title">Find us online</div>
+            <div class="social-links">
+              <a href="https://github.com/creativestack-web"
+                 class="social-link"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="CreativeStack on GitHub">
+                <div class="social-link__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </div>
+                <div class="social-link__text">
+                  <span class="social-link__label">GitHub</span>
+                  <span class="social-link__sub">github.com/creativestack-web</span>
+                </div>
+              </a>
+
+              <a href="https://creativestack-web.github.io/bg-eraser-pro/"
+                 class="social-link"
+                 aria-label="BG Eraser Pro live tool">
+                <div class="social-link__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2"
+                       stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="2" y1="12" x2="22" y2="12"/>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                  </svg>
+                </div>
+                <div class="social-link__text">
+                  <span class="social-link__label">Live Tool</span>
+                  <span class="social-link__sub">BG Eraser Pro</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </aside><!-- /.contact-sidebar -->
+
+        <!-- ─── FORM PANEL ─── -->
+        <div class="form-panel" role="region" aria-label="Send a message">
+
+          <!-- Form header -->
+          <div class="form-panel__header">
+            <div class="form-panel__eyebrow" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2.5"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              Send a Message
+            </div>
+            <h2>Drop Us a Note</h2>
+            <p class="form-panel__sub">
+              Fill in the form below and we'll get back to you at the email address you provide.
+              All fields marked with <span style="color:#ef4444;font-weight:600;">*</span> are required.
+            </p>
+          </div>
+
+          <!-- ════ CONTACT FORM ════ -->
+          <form
+            class="contact-form"
+            id="contactForm"
+            novalidate
+            aria-label="Contact form"
+          >
+
+            <!-- Full name + Email — side by side on desktop -->
+            <div class="field-group--row">
+
+              <!-- Full Name -->
+              <div class="field-group" id="nameGroup">
+                <label class="field-label" for="fullName">
+                  Full Name
+                  <span class="field-required" aria-label="required">*</span>
+                </label>
+                <div class="input-wrap">
+                  <span class="input-wrap__icon" aria-hidden="true">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                  </span>
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    class="field-input"
+                    placeholder="Jane Smith"
+                    autocomplete="name"
+                    required
+                    aria-required="true"
+                    aria-describedby="nameError"
+                    maxlength="80"
+                  />
+                </div>
+                <span class="field-error" id="nameError" role="alert" aria-live="polite">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="12" y1="8" x2="12" y2="12"/>
+                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                  </svg>
+                  Please enter your full name.
+                </span>
+              </div>
+
+              <!-- Email Address -->
+              <div class="field-group" id="emailGroup">
+                <label class="field-label" for="emailAddr">
+                  Email Address
+                  <span class="field-required" aria-label="required">*</span>
+                </label>
+                <div class="input-wrap">
+                  <span class="input-wrap__icon" aria-hidden="true">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                      <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                  </span>
+                  <input
+                    type="email"
+                    id="userEmail"
+                    name="email"
+                    class="field-input"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                    aria-required="true"
+                    aria-describedby="emailError"
+                    maxlength="120"
+                  />
+                </div>
+                <span class="field-error" id="emailError" role="alert" aria-live="polite">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="12" y1="8" x2="12" y2="12"/>
+                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                  </svg>
+                  Please enter a valid email address.
+                </span>
+              </div>
+
+            </div><!-- /.field-group--row -->
+
+            <!-- Inquiry Type (select) -->
+            <div class="field-group" id="typeGroup">
+              <label class="field-label" for="inquiryType">
+                Inquiry Type
+                <span class="field-required" aria-label="required">*</span>
+              </label>
+              <div class="input-wrap">
+                <span class="input-wrap__icon" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2"
+                       stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="12" y1="8" x2="12" y2="12"/>
+                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                  </svg>
+                </span>
+                <select
+                  id="inquiryType"
+                  name="inquiryType"
+                  class="field-select"
+                  required
+                  aria-required="true"
+                  aria-describedby="typeError"
+                  style="padding-left: 2.75rem;"
+                >
+                  <option value="" disabled selected>Select a topic…</option>
+                  <option value="support">Technical Support</option>
+                  <option value="feature">Feature Request</option>
+                  <option value="bug">Bug Report</option>
+                  <option value="business">Business Inquiry</option>
+                  <option value="advertising">Advertising &amp; Partnerships</option>
+                  <option value="privacy">Privacy / Data Request (GDPR / CCPA)</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <span class="field-error" id="typeError" role="alert" aria-live="polite">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="12" y1="8" x2="12" y2="12"/>
+                  <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+                Please select an inquiry type.
+              </span>
+            </div>
+
+            <!-- Subject -->
+            <div class="field-group" id="subjectGroup">
+              <label class="field-label" for="subject">
+                Subject
+                <span class="field-required" aria-label="required">*</span>
+              </label>
+              <div class="input-wrap">
+                <span class="input-wrap__icon" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2"
+                       stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="8" y1="6" x2="21" y2="6"/>
+                    <line x1="8" y1="12" x2="21" y2="12"/>
+                    <line x1="8" y1="18" x2="21" y2="18"/>
+                    <line x1="3" y1="6" x2="3.01" y2="6"/>
+                    <line x1="3" y1="12" x2="3.01" y2="12"/>
+                    <line x1="3" y1="18" x2="3.01" y2="18"/>
+                  </svg>
+                </span>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="field-input"
+                  placeholder="e.g. Background not removing correctly"
+                  required
+                  aria-required="true"
+                  aria-describedby="subjectError"
+                  maxlength="120"
+                />
+              </div>
+              <span class="field-error" id="subjectError" role="alert" aria-live="polite">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="12" y1="8" x2="12" y2="12"/>
+                  <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+                Please enter a subject line.
+              </span>
+            </div>
+
+            <!-- Message -->
+            <div class="field-group" id="messageGroup">
+              <label class="field-label" for="message">
+                Message
+                <span class="field-required" aria-label="required">*</span>
+                <span class="field-hint" aria-live="polite" id="charHint">0 / 1500</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                class="field-textarea"
+                placeholder="Tell us what you're experiencing, what you'd like to see, or how we can help you…"
+                required
+                aria-required="true"
+                aria-describedby="messageError charHint"
+                maxlength="1500"
+                rows="6"
+              ></textarea>
+              <div class="char-counter" id="charCounter" aria-hidden="true">0 / 1500</div>
+              <span class="field-error" id="messageError" role="alert" aria-live="polite">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="12" y1="8" x2="12" y2="12"/>
+                  <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+                Message must be at least 20 characters.
+              </span>
+            </div>
+
+            <!-- Consent -->
+            <div class="field-group" id="consentGroup">
+              <div class="consent-row">
+                <input
+                  type="checkbox"
+                  id="consent"
+                  name="consent"
+                  class="consent-check"
+                  required
+                  aria-required="true"
+                  aria-describedby="consentError"
+                />
+                <label class="consent-label" for="consent">
+                  I agree to the
+                  <a href="privacy-policy.html">Privacy Policy</a>
+                  and consent to BG Eraser Pro using the information I provide to respond
+                  to my inquiry. I understand my data will not be sold or shared with
+                  third parties beyond what is described in the privacy policy.
+                </label>
+              </div>
+              <span class="field-error" id="consentError" role="alert" aria-live="polite">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="12" y1="8" x2="12" y2="12"/>
+                  <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+                You must agree to the privacy policy to proceed.
+              </span>
+            </div>
+
+            <!-- Divider -->
+            <div class="form-divider" aria-hidden="true">or send directly to our inbox</div>
+
+            <!-- Submit -->
+            <div>
+              <button type="submit" class="submit-btn" id="submitBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"/>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+                <span id="submitLabel">Send Message</span>
+              </button>
+              <div class="submit-note" aria-live="polite">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.2"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                Your information is encrypted and never sold to third parties.
+              </div>
+            </div>
+
+          </form><!-- /#contactForm -->
+
+          <!-- ════ SUCCESS STATE ════ -->
+          <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+            <div class="success-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <h3>Message Sent!</h3>
+            <p>
+              Thank you for reaching out. We've received your message and will get
+              back to you at the email address you provided within <strong>24–48 hours</strong>.
+            </p>
+            <button class="reset-btn" id="resetBtn" type="button">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2.2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="1 4 1 10 7 10"/>
+                <path d="M3.51 15a9 9 0 1 0 .49-3.62"/>
+              </svg>
+              Send Another Message
+            </button>
+          </div>
+
+        </div><!-- /.form-panel -->
+
+      </div><!-- /.contact-layout -->
+    </div><!-- /.container -->
+
+    <!-- ══════════════════════════════════════
+         FAQ STRIP
+    ══════════════════════════════════════ -->
+    <section class="faq-strip" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="faq-strip__header">
+          <div class="faq-strip__eyebrow" aria-hidden="true">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+            Quick Answers
+          </div>
+          <h2 id="faq-heading">Before You Write In</h2>
+          <p class="faq-strip__sub">These answers might save you the wait.</p>
+        </div>
+
+        <div class="faq-grid">
+          <details class="faq-item">
+            <summary class="faq-q">
+              <span>My image background was not removed correctly. What should I do?</span>
+              <div class="faq-chevron" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-a">
+              The AI performs best on images with clear contrast between the subject and background.
+              For challenging images (transparent objects, fine hair against complex scenes), try
+              uploading a higher-resolution version of the photo. If the issue persists, use the
+              contact form above and attach a description of the image.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">
+              <span>Are my uploaded images stored on your servers?</span>
+              <div class="faq-chevron" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-a">
+              No — never. Your images are sent directly from your browser to the remove.bg API
+              over an encrypted HTTPS connection. BG Eraser Pro does not receive, store, or
+              archive a copy of any image you upload. Full details are in our
+              <a href="privacy-policy.html">Privacy Policy</a>.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">
+              <span>Which image formats are supported?</span>
+              <div class="faq-chevron" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-a">
+              BG Eraser Pro accepts <strong>PNG, JPG / JPEG, SVG,</strong> and <strong>WebP</strong>
+              image files up to 10 MB in size. The output is always a transparent PNG file regardless
+              of the input format.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">
+              <span>Can I use BG Eraser Pro for commercial projects?</span>
+              <div class="faq-chevron" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-a">
+              Yes. The transparent PNG you download belongs entirely to you. You may use it for
+              personal or commercial projects without any restriction from BG Eraser Pro. You
+              remain responsible for ensuring you own or have licensed the original source image.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">
+              <span>I am interested in advertising on BG Eraser Pro. Who should I contact?</span>
+              <div class="faq-chevron" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-a">
+              For advertising inquiries, sponsorship opportunities, or partnership discussions,
+              please select <strong>"Advertising &amp; Partnerships"</strong> in the inquiry type
+              dropdown above, or email us directly at
+              <a href="mailto:support.creativestack@gmail.com">support.creativestack@gmail.com</a>.
+              We respond to all business inquiries within 48 hours.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">
+              <span>How do I submit a GDPR or CCPA data request?</span>
+              <div class="faq-chevron" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </div>
+            </summary>
+            <div class="faq-a">
+              Select <strong>"Privacy / Data Request (GDPR / CCPA)"</strong> from the inquiry
+              type dropdown in the contact form above, or email
+              <a href="mailto:privacy@creativestack.dev">privacy@creativestack.dev</a> directly.
+              GDPR requests are handled within 30 days; CCPA requests within 45 days. Full details
+              are in our <a href="privacy-policy.html">Privacy Policy</a>.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <a href="index.html" class="footer__logo" aria-label="BG Eraser Pro — Home">
+        <div class="nav__logo-gem" style="width:28px;height:28px;font-size:0.75rem;" aria-hidden="true">✦</div>
+        BG<em>Eraser</em>&nbsp;Pro
+      </a>
+
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="index.html">Tool</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html" class="active" aria-current="page">Contact</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </nav>
+
+      <p class="footer__legal">
+        &copy; <span id="footerYear"></span> BG Eraser Pro by
+        <a href="https://github.com/creativestack-web" target="_blank" rel="noopener noreferrer">CreativeStack</a>.
+        Background removal powered by
+        <a href="https://www.remove.bg" target="_blank" rel="noopener noreferrer">remove.bg</a>.
+        All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════
+       JAVASCRIPT
+  ══════════════════════════════════════ -->
+  <script>
+    'use strict';
+
+    /* ─── Footer year ─── */
+    document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+    /* ─── Mobile nav ─── */
+    const burger = document.getElementById('burgerBtn');
+    const drawer = document.getElementById('navDrawer');
+
+    burger.addEventListener('click', () => {
+      const open = drawer.classList.toggle('open');
+      burger.setAttribute('aria-expanded', String(open));
+      drawer.setAttribute('aria-hidden',   String(!open));
+    });
+    drawer.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        drawer.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+        drawer.setAttribute('aria-hidden', 'true');
+      });
+    });
+
+    /* ─── Copy email to clipboard ─── */
+    const copyBtn   = document.getElementById('copyBtn');
+    const emailText = document.getElementById('emailAddr').textContent.trim();
+
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(emailText);
+        copyBtn.textContent = '✓ Copied';
+        copyBtn.classList.add('copied');
+        setTimeout(() => {
+          copyBtn.innerHTML = `
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            Copy`;
+          copyBtn.classList.remove('copied');
+        }, 2200);
+      } catch (_) {
+        /* Fallback for browsers that block clipboard API */
+        copyBtn.textContent = emailText;
+      }
+    });
+
+    /* ─── Character counter ─── */
+    const msgField   = document.getElementById('message');
+    const charCounter = document.getElementById('charCounter');
+    const charHint    = document.getElementById('charHint');
+    const MAX_CHARS   = 1500;
+
+    function updateCharCount() {
+      const len  = msgField.value.length;
+      const text = `${len} / ${MAX_CHARS}`;
+      charCounter.textContent = text;
+      charHint.textContent    = text;
+      charCounter.className   = 'char-counter' +
+        (len > MAX_CHARS * 0.9  ? ' warn'  : '') +
+        (len >= MAX_CHARS       ? ' limit' : '');
+    }
+    msgField.addEventListener('input', updateCharCount);
+
+    /* ─── Form validation helpers ─── */
+    function setError(groupId, errorId, show) {
+      const group = document.getElementById(groupId);
+      const error = document.getElementById(errorId);
+      if (show) {
+        group.classList.add('has-error');
+        error.classList.add('visible');
+      } else {
+        group.classList.remove('has-error');
+        error.classList.remove('visible');
+      }
+      return !show; // returns true if valid
+    }
+
+    function validateName() {
+      const val = document.getElementById('fullName').value.trim();
+      return setError('nameGroup', 'nameError', val.length < 2);
+    }
+    function validateEmail() {
+      const val = document.getElementById('userEmail').value.trim();
+      const re  = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return setError('emailGroup', 'emailError', !re.test(val));
+    }
+    function validateType() {
+      const val = document.getElementById('inquiryType').value;
+      return setError('typeGroup', 'typeError', !val);
+    }
+    function validateSubject() {
+      const val = document.getElementById('subject').value.trim();
+      return setError('subjectGroup', 'subjectError', val.length < 3);
+    }
+    function validateMessage() {
+      const val = msgField.value.trim();
+      return setError('messageGroup', 'messageError', val.length < 20);
+    }
+    function validateConsent() {
+      const checked = document.getElementById('consent').checked;
+      return setError('consentGroup', 'consentError', !checked);
+    }
+
+    /* Live validation on blur */
+    document.getElementById('fullName').addEventListener('blur',     validateName);
+    document.getElementById('userEmail').addEventListener('blur',    validateEmail);
+    document.getElementById('inquiryType').addEventListener('change',validateType);
+    document.getElementById('subject').addEventListener('blur',      validateSubject);
+    msgField.addEventListener('blur',                                 validateMessage);
+
+    /* ─── Form submission ─── */
+    const form       = document.getElementById('contactForm');
+    const submitBtn  = document.getElementById('submitBtn');
+    const submitLbl  = document.getElementById('submitLabel');
+    const formSuccess = document.getElementById('formSuccess');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      /* Run all validations */
+      const valid =
+        validateName()    &
+        validateEmail()   &
+        validateType()    &
+        validateSubject() &
+        validateMessage() &
+        validateConsent();
+
+      if (!valid) {
+        /* Scroll first error into view */
+        const firstErr = form.querySelector('.field-group.has-error');
+        if (firstErr) {
+          firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          firstErr.querySelector('input, textarea, select')?.focus();
+        }
+        return;
+      }
+
+      /* Loading state */
+      submitBtn.disabled = true;
+      submitLbl.textContent = 'Sending…';
+      submitBtn.querySelector('svg').style.animationName = 'spin';
+
+      /* ── INTEGRATION POINT ──────────────────────────────────
+         Replace the setTimeout below with your actual form
+         submission logic. Options include:
+
+         1. Formspree (free, no backend):
+            const res = await fetch('https://formspree.io/f/YOUR_ID', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                name:    document.getElementById('fullName').value,
+                email:   document.getElementById('userEmail').value,
+                type:    document.getElementById('inquiryType').value,
+                subject: document.getElementById('subject').value,
+                message: msgField.value,
+              })
+            });
+
+         2. EmailJS (client-side email SDK):
+            emailjs.sendForm('SERVICE_ID', 'TEMPLATE_ID', form);
+
+         3. mailto: fallback:
+            window.location.href =
+              `mailto:support.creativestack@gmail.com?subject=...`;
+      ── END INTEGRATION POINT ── */
+
+      await new Promise(r => setTimeout(r, 1400)); /* simulated network delay */
+
+      /* Show success state */
+      form.style.display = 'none';
+      formSuccess.classList.add('visible');
+      formSuccess.focus();
+    });
+
+    /* ─── Reset form ─── */
+    document.getElementById('resetBtn').addEventListener('click', () => {
+      form.reset();
+      updateCharCount();
+      /* Clear all error states */
+      document.querySelectorAll('.field-group.has-error').forEach(g => {
+        g.classList.remove('has-error');
+      });
+      document.querySelectorAll('.field-error.visible').forEach(e => {
+        e.classList.remove('visible');
+      });
+      /* Hide success, show form */
+      formSuccess.classList.remove('visible');
+      form.style.display = '';
+      submitBtn.disabled = false;
+      submitLbl.textContent = 'Send Message';
+    });
+
+  </script>
+</body>
+</html>
