@@ -1,0 +1,2546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>About Us — BG Eraser Pro | CreativeStack Web</title>
+  <meta name="description" content="Learn about BG Eraser Pro and CreativeStack Web — a professional development studio building fast, accessible, AI-powered web tools. Our mission, values, and the team behind the tool." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://creativestack-web.github.io/bg-eraser-pro/about.html" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://creativestack-web.github.io/bg-eraser-pro/about.html" />
+  <meta property="og:title"       content="About Us — BG Eraser Pro | CreativeStack Web" />
+  <meta property="og:description" content="Meet the team and mission behind BG Eraser Pro — a free AI background removal tool built by CreativeStack Web." />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ═══════════════════════════════════════════════════
+       DESIGN TOKENS
+    ═══════════════════════════════════════════════════ */
+    :root {
+      /* Palette */
+      --white:         #ffffff;
+      --canvas:        #f8fafc;
+      --surface:       #f1f5f9;
+      --surface-2:     #e8edf5;
+      --rule:          #e2e8f0;
+      --rule-2:        #cbd5e1;
+
+      --ink:           #0f172a;
+      --ink-2:         #1e293b;
+      --ink-3:         #334155;
+      --muted:         #64748b;
+      --muted-2:       #94a3b8;
+      --muted-3:       #cbd5e1;
+
+      --accent:        #3b5bdb;
+      --accent-hover:  #2f4cc4;
+      --accent-light:  #eef2ff;
+      --accent-mid:    #c5d0f5;
+      --accent-text:   #2f4cc4;
+      --accent-glow:   rgba(59, 91, 219, 0.16);
+
+      --indigo-deep:   #1e2d6b;
+      --indigo-mid:    #3730a3;
+
+      --green:         #16a34a;
+      --green-light:   #f0fdf4;
+      --green-mid:     #bbf7d0;
+
+      --amber:         #d97706;
+      --amber-light:   #fffbeb;
+      --amber-mid:     #fde68a;
+
+      --violet:        #7c3aed;
+      --violet-light:  #f5f3ff;
+      --violet-mid:    #ddd6fe;
+
+      --sky:           #0284c7;
+      --sky-light:     #f0f9ff;
+      --sky-mid:       #bae6fd;
+
+      --rose:          #e11d48;
+      --rose-light:    #fff1f2;
+      --rose-mid:      #fecdd3;
+
+      /* Typography */
+      --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+      --font-body:    'DM Sans', ui-sans-serif, -apple-system, BlinkMacSystemFont,
+                      'Segoe UI', system-ui, Helvetica, Arial, sans-serif;
+      --font-mono:    ui-monospace, 'Cascadia Code', 'Fira Code', 'Courier New', monospace;
+
+      /* Spacing */
+      --sp-1:  0.25rem;
+      --sp-2:  0.5rem;
+      --sp-3:  0.75rem;
+      --sp-4:  1rem;
+      --sp-5:  1.25rem;
+      --sp-6:  1.5rem;
+      --sp-8:  2rem;
+      --sp-10: 2.5rem;
+      --sp-12: 3rem;
+      --sp-16: 4rem;
+      --sp-20: 5rem;
+      --sp-24: 6rem;
+
+      /* Radii */
+      --r-xs:  0.25rem;
+      --r-sm:  0.5rem;
+      --r-md:  0.75rem;
+      --r-lg:  1rem;
+      --r-xl:  1.375rem;
+      --r-2xl: 1.875rem;
+      --r-3xl: 2.5rem;
+      --r-full: 9999px;
+
+      /* Shadows */
+      --shadow-xs: 0 1px 2px rgba(15,23,42,0.05);
+      --shadow-sm: 0 1px 6px rgba(15,23,42,0.07), 0 2px 10px rgba(15,23,42,0.04);
+      --shadow-md: 0 4px 20px rgba(15,23,42,0.09), 0 2px 8px rgba(15,23,42,0.05);
+      --shadow-lg: 0 12px 48px rgba(15,23,42,0.11), 0 4px 16px rgba(15,23,42,0.06);
+      --shadow-xl: 0 24px 64px rgba(15,23,42,0.14), 0 8px 24px rgba(15,23,42,0.08);
+      --shadow-accent: 0 8px 32px rgba(59,91,219,0.28);
+
+      /* Motion */
+      --ease:   cubic-bezier(0.4, 0, 0.2, 1);
+      --t-fast: 0.15s var(--ease);
+      --t-med:  0.28s var(--ease);
+      --t-slow: 0.48s var(--ease);
+
+      /* Layout */
+      --nav-h:     66px;
+      --container: 1140px;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       RESET & BASE
+    ═══════════════════════════════════════════════════ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+    body {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--ink-3);
+      background: var(--white);
+      min-height: 100vh;
+    }
+    img  { display: block; max-width: 100%; }
+    a    { color: var(--accent); text-decoration: none; transition: color var(--t-fast); }
+    a:hover { color: var(--accent-hover); }
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: var(--r-sm);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════
+       CONTAINER
+    ═══════════════════════════════════════════════════ */
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 var(--sp-6);
+    }
+    .container--narrow {
+      max-width: 800px;
+    }
+    .container--mid {
+      max-width: 960px;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       NAVIGATION
+    ═══════════════════════════════════════════════════ */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--rule);
+      box-shadow: var(--shadow-xs);
+    }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    /* Logo */
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+      flex-shrink: 0;
+    }
+    .nav__logo-gem {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, var(--accent) 0%, #6ea8fe 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.85rem;
+      box-shadow: 0 3px 12px rgba(59,91,219,0.38);
+      flex-shrink: 0;
+      user-select: none;
+    }
+    .nav__logo em { color: var(--accent); font-style: normal; }
+
+    /* Nav links */
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-6);
+    }
+    .nav__links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color var(--t-fast);
+      white-space: nowrap;
+    }
+    .nav__links a:hover { color: var(--ink); }
+    .nav__links a.active { color: var(--accent-text); font-weight: 600; }
+
+    /* Back link */
+    .nav__back {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 0.42rem 0.9rem;
+      border-radius: var(--r-md);
+      border: 1px solid var(--rule);
+      background: var(--white);
+      transition: color var(--t-fast), border-color var(--t-fast),
+                  background var(--t-fast), transform var(--t-fast),
+                  box-shadow var(--t-fast);
+      box-shadow: var(--shadow-xs);
+    }
+    .nav__back:hover {
+      color: var(--accent-text);
+      border-color: var(--accent-mid);
+      background: var(--accent-light);
+      transform: translateX(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* CTA */
+    .nav__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.855rem;
+      font-weight: 600;
+      padding: 0.48rem 1.1rem;
+      border-radius: var(--r-md);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background var(--t-fast), transform var(--t-fast), box-shadow var(--t-fast);
+      box-shadow: 0 2px 10px rgba(59,91,219,0.32);
+    }
+    .nav__cta:hover {
+      background: var(--accent-hover);
+      color: #fff;
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-accent);
+    }
+
+    /* Burger */
+    .nav__burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      margin-left: var(--sp-2);
+    }
+    .nav__burger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--ink-3);
+      border-radius: 2px;
+      transition: transform var(--t-fast), opacity var(--t-fast);
+    }
+    .nav__burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav__burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .nav__burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Drawer */
+    .nav__drawer {
+      display: none;
+      position: absolute;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--rule);
+      box-shadow: var(--shadow-md);
+      padding: var(--sp-5) var(--sp-6) var(--sp-6);
+      z-index: 190;
+    }
+    .nav__drawer.open { display: block; }
+    .nav__drawer a {
+      display: block;
+      font-size: 0.975rem;
+      font-weight: 500;
+      color: var(--ink-3);
+      text-decoration: none;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--rule);
+      transition: color var(--t-fast);
+    }
+    .nav__drawer a:last-child { border-bottom: none; padding-bottom: 0; }
+    .nav__drawer a:hover  { color: var(--accent); }
+    .nav__drawer a.active { color: var(--accent-text); font-weight: 600; }
+
+    /* ═══════════════════════════════════════════════════
+       BREADCRUMB
+    ═══════════════════════════════════════════════════ */
+    .breadcrumb-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--rule);
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-2);
+      padding: var(--sp-3) 0;
+      font-size: 0.8rem;
+      color: var(--muted-2);
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb__sep { user-select: none; }
+    .breadcrumb__current { color: var(--muted); }
+
+    /* ═══════════════════════════════════════════════════
+       SHARED SECTION UTILITIES
+    ═══════════════════════════════════════════════════ */
+    .section {
+      padding: var(--sp-20) 0;
+    }
+    .section--alt {
+      background: var(--canvas);
+    }
+    .section--dark {
+      background: var(--ink);
+    }
+    .section--border-top {
+      border-top: 1px solid var(--rule);
+    }
+
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: var(--accent-text);
+      background: var(--accent-light);
+      border: 1px solid var(--accent-mid);
+      padding: 0.3rem 0.9rem;
+      border-radius: var(--r-full);
+      margin-bottom: var(--sp-5);
+    }
+    .section-eyebrow--white {
+      color: rgba(255,255,255,0.9);
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+      margin-bottom: var(--sp-4);
+    }
+    .section-title--white { color: #fff; }
+    .section-title em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .section-title--white em { color: #93c5fd; }
+
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 600px;
+    }
+    .section-sub--white { color: rgba(255,255,255,0.65); }
+    .section-sub--center { margin-left: auto; margin-right: auto; }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto var(--sp-16);
+    }
+
+    /* ═══════════════════════════════════════════════════
+       PAGE HERO
+    ═══════════════════════════════════════════════════ */
+    .hero {
+      background: linear-gradient(160deg,
+        var(--white)       0%,
+        #f4f6ff           40%,
+        #eef2ff           75%,
+        #e8edfe           100%);
+      border-bottom: 1px solid var(--rule);
+      padding: var(--sp-24) 0 var(--sp-20);
+      position: relative;
+      overflow: hidden;
+    }
+    /* Background decorative geometry */
+    .hero__geo {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .hero__geo-circle {
+      position: absolute;
+      border-radius: 50%;
+    }
+    .hero__geo-circle--a {
+      width: 700px; height: 700px;
+      top: -340px; right: -200px;
+      background: radial-gradient(circle, rgba(59,91,219,0.07) 0%, transparent 65%);
+    }
+    .hero__geo-circle--b {
+      width: 500px; height: 500px;
+      bottom: -280px; left: -150px;
+      background: radial-gradient(circle, rgba(124,58,237,0.05) 0%, transparent 60%);
+    }
+    .hero__geo-circle--c {
+      width: 300px; height: 300px;
+      top: 50%; right: 12%;
+      transform: translateY(-50%);
+      background: radial-gradient(circle, rgba(2,132,199,0.06) 0%, transparent 60%);
+    }
+    /* Subtle grid lines */
+    .hero__geo-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(59,91,219,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59,91,219,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.4) 40%, transparent 100%);
+      -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.4) 40%, transparent 100%);
+    }
+
+    .hero__inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: var(--sp-16);
+      align-items: center;
+    }
+    .hero__copy { max-width: 620px; }
+
+    /* Brand badge */
+    .hero__brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      background: var(--white);
+      border: 1px solid var(--rule-2);
+      border-radius: var(--r-full);
+      padding: 0.32rem 0.9rem 0.32rem 0.5rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: var(--sp-6);
+    }
+    .hero__brand-dot {
+      width: 28px; height: 28px;
+      border-radius: var(--r-sm);
+      background: linear-gradient(135deg, var(--accent) 0%, #6ea8fe 100%);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      flex-shrink: 0;
+    }
+    .hero__brand-name {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--ink-2);
+      letter-spacing: -0.01em;
+    }
+    .hero__brand-sep {
+      width: 1px; height: 14px;
+      background: var(--rule-2);
+      flex-shrink: 0;
+    }
+    .hero__brand-tag {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+      margin-bottom: var(--sp-5);
+    }
+    .hero h1 em {
+      font-style: italic;
+      background: linear-gradient(135deg, var(--accent) 0%, #818cf8 50%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero__sub {
+      font-size: 1.1rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: var(--sp-8);
+      max-width: 540px;
+    }
+
+    /* Hero action row */
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--sp-4);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      font-family: var(--font-body);
+      font-size: 0.925rem;
+      font-weight: 600;
+      padding: 0.72rem 1.5rem;
+      border-radius: var(--r-lg);
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform var(--t-fast), box-shadow var(--t-fast),
+                  background var(--t-fast), color var(--t-fast);
+      white-space: nowrap;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn--primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 2px 12px rgba(59,91,219,0.35);
+    }
+    .btn--primary:hover {
+      background: var(--accent-hover);
+      color: #fff;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 24px rgba(59,91,219,0.45);
+    }
+    .btn--ghost {
+      background: var(--white);
+      color: var(--ink-3);
+      border: 1px solid var(--rule-2);
+      box-shadow: var(--shadow-xs);
+    }
+    .btn--ghost:hover {
+      border-color: var(--accent-mid);
+      color: var(--accent-text);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Hero visual card */
+    .hero__visual {
+      position: relative;
+    }
+    .hero-card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-2xl);
+      padding: var(--sp-8);
+      box-shadow: var(--shadow-xl);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), #818cf8, #38bdf8);
+    }
+    .hero-card__header {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+      margin-bottom: var(--sp-6);
+    }
+    .hero-card__traffic {
+      display: flex;
+      gap: 6px;
+    }
+    .hct {
+      width: 11px; height: 11px;
+      border-radius: 50%;
+    }
+    .hct--r { background: #ff5f56; }
+    .hct--y { background: #ffbd2e; }
+    .hct--g { background: #27c93f; }
+    .hero-card__title {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+
+    /* Mock upload area inside card */
+    .hero-card__upload {
+      border: 2px dashed var(--accent-mid);
+      border-radius: var(--r-xl);
+      padding: var(--sp-8) var(--sp-6);
+      text-align: center;
+      background: var(--accent-light);
+      margin-bottom: var(--sp-5);
+    }
+    .hero-card__upload-icon {
+      width: 52px; height: 52px;
+      border-radius: var(--r-lg);
+      background: linear-gradient(135deg, var(--accent) 0%, #6ea8fe 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--sp-4);
+      box-shadow: 0 4px 16px rgba(59,91,219,0.3);
+      color: #fff;
+    }
+    .hero-card__upload-title {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--ink-2);
+      margin-bottom: var(--sp-1);
+    }
+    .hero-card__upload-sub {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* Format chips */
+    .hero-card__formats {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: var(--sp-2);
+    }
+    .fchip {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.22rem 0.65rem;
+      border-radius: var(--r-full);
+      border: 1px solid;
+      letter-spacing: 0.04em;
+    }
+    .fchip--png  { color: var(--violet); border-color: var(--violet-mid); background: var(--violet-light); }
+    .fchip--jpg  { color: var(--amber);  border-color: var(--amber-mid);  background: var(--amber-light); }
+    .fchip--svg  { color: var(--green);  border-color: var(--green-mid);  background: var(--green-light); }
+    .fchip--webp { color: var(--sky);    border-color: var(--sky-mid);    background: var(--sky-light); }
+
+    /* Stats row inside card */
+    .hero-card__stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-2);
+      margin-top: var(--sp-5);
+    }
+    .hero-stat {
+      text-align: center;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-md);
+      padding: var(--sp-3) var(--sp-2);
+    }
+    .hero-stat__num {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+    .hero-stat__label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Floating badge on card */
+    .hero-card__badge {
+      position: absolute;
+      top: var(--sp-4);
+      right: var(--sp-4);
+      background: var(--green-light);
+      border: 1px solid var(--green-mid);
+      border-radius: var(--r-full);
+      padding: 0.25rem 0.7rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--green);
+      display: flex;
+      align-items: center;
+      gap: var(--sp-1);
+    }
+    .hero-card__badge-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 3px rgba(22,163,74,0.2);
+      animation: pulseDot 2s ease-in-out infinite;
+    }
+    @keyframes pulseDot {
+      0%, 100% { box-shadow: 0 0 0 3px rgba(22,163,74,0.2); }
+      50%       { box-shadow: 0 0 0 6px rgba(22,163,74,0.07); }
+    }
+
+    /* ═══════════════════════════════════════════════════
+       STATS BAND
+    ═══════════════════════════════════════════════════ */
+    .stats-band {
+      background: var(--white);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: var(--sp-10) 0;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--sp-8);
+      text-align: center;
+    }
+    .stat-item {
+      position: relative;
+    }
+    .stat-item + .stat-item::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 48px;
+      background: var(--rule);
+    }
+    .stat-item__num {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      margin-bottom: var(--sp-2);
+    }
+    .stat-item__num span {
+      background: linear-gradient(135deg, var(--accent), #818cf8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .stat-item__label {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       MISSION SECTION
+    ═══════════════════════════════════════════════════ */
+    .mission-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-16);
+      align-items: center;
+    }
+    .mission-prose h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+      margin-bottom: var(--sp-5);
+    }
+    .mission-prose h2 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .mission-prose p {
+      font-size: 0.975rem;
+      color: var(--muted);
+      line-height: 1.85;
+      margin-bottom: var(--sp-4);
+    }
+    .mission-prose p:last-child { margin-bottom: 0; }
+    .mission-prose strong { color: var(--ink-2); font-weight: 600; }
+
+    /* Pull quote */
+    .pull-quote {
+      margin: var(--sp-8) 0;
+      padding: var(--sp-6) var(--sp-6);
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--r-lg) var(--r-lg) 0;
+    }
+    .pull-quote__text {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--ink-2);
+      line-height: 1.6;
+      margin-bottom: var(--sp-3);
+    }
+    .pull-quote__source {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent-text);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* Mission visual */
+    .mission-visual {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-4);
+    }
+    .mission-step {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--sp-4);
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-xl);
+      padding: var(--sp-5);
+      box-shadow: var(--shadow-xs);
+      transition: border-color var(--t-med), box-shadow var(--t-med), transform var(--t-med);
+    }
+    .mission-step:hover {
+      border-color: var(--accent-mid);
+      box-shadow: var(--shadow-md);
+      transform: translateX(4px);
+    }
+    .mission-step__num {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--accent-mid);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 36px;
+      text-align: center;
+    }
+    .mission-step__body { flex: 1; min-width: 0; }
+    .mission-step__title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--ink-2);
+      margin-bottom: 3px;
+    }
+    .mission-step__desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .mission-step__icon {
+      width: 36px; height: 36px;
+      border-radius: var(--r-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       WHO WE ARE
+    ═══════════════════════════════════════════════════ */
+    .who-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-16);
+      align-items: center;
+    }
+    /* Visual side for "Who We Are" */
+    .who-visual {
+      position: relative;
+    }
+    .who-main-card {
+      background: var(--ink);
+      border-radius: var(--r-2xl);
+      padding: var(--sp-10);
+      box-shadow: var(--shadow-xl);
+      position: relative;
+      overflow: hidden;
+    }
+    .who-main-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), #818cf8, #38bdf8);
+    }
+    .who-main-card::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; right: -80px;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(59,91,219,0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .who-main-card__logo {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+      margin-bottom: var(--sp-6);
+    }
+    .who-logo-gem {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent) 0%, #6ea8fe 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 16px rgba(59,91,219,0.4);
+      flex-shrink: 0;
+    }
+    .who-logo-text {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+    .who-logo-text em {
+      color: #93c5fd;
+      font-style: normal;
+    }
+    .who-main-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--sp-4);
+      line-height: 1.3;
+    }
+    .who-main-card p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.75;
+      margin-bottom: var(--sp-5);
+    }
+    /* Pillars inside dark card */
+    .who-pillars {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-3);
+    }
+    .who-pillar {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--r-lg);
+      padding: var(--sp-3) var(--sp-4);
+    }
+    .who-pillar__check {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: rgba(22,163,74,0.18);
+      border: 1px solid rgba(22,163,74,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4ade80;
+      flex-shrink: 0;
+    }
+    .who-pillar__text {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* Floating tags on who-visual */
+    .who-float {
+      position: absolute;
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-lg);
+      padding: var(--sp-3) var(--sp-4);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: var(--sp-2);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--ink-2);
+    }
+    .who-float--a {
+      top: -18px;
+      right: -20px;
+    }
+    .who-float--b {
+      bottom: -16px;
+      left: -20px;
+    }
+    .who-float__icon {
+      width: 24px; height: 24px;
+      border-radius: var(--r-xs);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    /* Prose side for who */
+    .who-prose .section-eyebrow { margin-bottom: var(--sp-5); }
+    .who-prose h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+      margin-bottom: var(--sp-5);
+    }
+    .who-prose h2 em { font-style: italic; color: var(--accent); }
+    .who-prose p {
+      font-size: 0.975rem;
+      color: var(--muted);
+      line-height: 1.85;
+      margin-bottom: var(--sp-4);
+    }
+    .who-prose p:last-child { margin-bottom: 0; }
+    .who-prose strong { color: var(--ink-2); font-weight: 600; }
+
+    /* Tool links */
+    .tool-links {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-2);
+      margin-top: var(--sp-6);
+    }
+    .tool-link {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-lg);
+      padding: var(--sp-3) var(--sp-4);
+      transition: border-color var(--t-fast), background var(--t-fast), transform var(--t-fast);
+      text-decoration: none;
+    }
+    .tool-link:hover {
+      border-color: var(--accent-mid);
+      background: var(--accent-light);
+      transform: translateX(3px);
+    }
+    .tool-link__icon {
+      width: 32px; height: 32px;
+      border-radius: var(--r-sm);
+      background: var(--accent-light);
+      border: 1px solid var(--accent-mid);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .tool-link__text { flex: 1; min-width: 0; }
+    .tool-link__name {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--ink-2);
+    }
+    .tool-link__desc {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .tool-link__arrow {
+      color: var(--muted-2);
+      flex-shrink: 0;
+      transition: color var(--t-fast), transform var(--t-fast);
+    }
+    .tool-link:hover .tool-link__arrow {
+      color: var(--accent);
+      transform: translateX(2px);
+    }
+
+    /* ═══════════════════════════════════════════════════
+       WHY CHOOSE US
+    ═══════════════════════════════════════════════════ */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-6);
+    }
+    .why-card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-2xl);
+      padding: var(--sp-8) var(--sp-6);
+      position: relative;
+      overflow: hidden;
+      transition: border-color var(--t-med), box-shadow var(--t-med), transform var(--t-med);
+    }
+    .why-card:hover {
+      border-color: var(--accent-mid);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-6px);
+    }
+    /* Top gradient line */
+    .why-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--card-accent, linear-gradient(90deg, var(--accent), #818cf8));
+      opacity: 0;
+      transition: opacity var(--t-med);
+    }
+    .why-card:hover::before { opacity: 1; }
+    /* Background shimmer */
+    .why-card::after {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: var(--card-bg, rgba(59,91,219,0.04));
+      pointer-events: none;
+    }
+
+    .why-card__icon {
+      width: 52px; height: 52px;
+      border-radius: var(--r-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--sp-5);
+      position: relative;
+      z-index: 1;
+    }
+    .why-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      margin-bottom: var(--sp-3);
+      position: relative;
+      z-index: 1;
+    }
+    .why-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.75;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Bottom tag */
+    .why-card__tag {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-1);
+      margin-top: var(--sp-4);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 0.22rem 0.65rem;
+      border-radius: var(--r-full);
+      border: 1px solid;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       DARK CTA SECTION
+    ═══════════════════════════════════════════════════ */
+    .cta-section {
+      background: var(--ink);
+      padding: var(--sp-20) 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -200px; left: 50%;
+      transform: translateX(-50%);
+      width: 800px; height: 500px;
+      background: radial-gradient(ellipse, rgba(59,91,219,0.18) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .cta-section__inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .cta-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: var(--sp-5);
+    }
+    .cta-section h2 em {
+      font-style: italic;
+      color: #93c5fd;
+    }
+    .cta-section p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.8;
+      margin-bottom: var(--sp-10);
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--sp-4);
+    }
+    .btn--white {
+      background: #fff;
+      color: var(--ink-2);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+    .btn--white:hover {
+      background: #f1f5f9;
+      color: var(--ink);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.4);
+    }
+    .btn--outline-white {
+      background: rgba(255,255,255,0.07);
+      color: rgba(255,255,255,0.85);
+      border: 1px solid rgba(255,255,255,0.18);
+      box-shadow: none;
+    }
+    .btn--outline-white:hover {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      border-color: rgba(255,255,255,0.3);
+      transform: translateY(-1px);
+    }
+
+    /* Trust indicators in CTA */
+    .cta-trust {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--sp-6);
+      margin-top: var(--sp-10);
+      padding-top: var(--sp-10);
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta-trust-item {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-2);
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      font-weight: 500;
+    }
+    .cta-trust-item svg { color: rgba(255,255,255,0.3); }
+
+    /* ═══════════════════════════════════════════════════
+       VALUES ROW (small strip)
+    ═══════════════════════════════════════════════════ */
+    .values-strip {
+      background: var(--surface);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: var(--sp-16) 0;
+    }
+    .values-strip-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--sp-6);
+    }
+    .value-item {
+      text-align: center;
+      padding: var(--sp-6) var(--sp-4);
+    }
+    .value-item__icon {
+      width: 48px; height: 48px;
+      border-radius: var(--r-xl);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--sp-4);
+      font-size: 1.3rem;
+      border: 1px solid;
+    }
+    .value-item h4 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink-2);
+      letter-spacing: -0.015em;
+      margin-bottom: var(--sp-2);
+    }
+    .value-item p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════════ */
+    .footer {
+      background: var(--white);
+      border-top: 1px solid var(--rule);
+      padding: var(--sp-10) 0;
+    }
+    .footer__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--sp-5);
+      text-align: center;
+    }
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .footer__logo em { color: var(--accent); font-style: normal; }
+    .footer__nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--sp-5);
+    }
+    .footer__nav a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color var(--t-fast);
+    }
+    .footer__nav a:hover  { color: var(--accent); }
+    .footer__nav a.active { color: var(--accent-text); }
+    .footer__legal {
+      font-size: 0.78rem;
+      color: var(--muted-2);
+      max-width: 580px;
+      line-height: 1.65;
+    }
+    .footer__legal a { color: var(--muted); }
+    .footer__legal a:hover { color: var(--accent); }
+
+    /* ═══════════════════════════════════════════════════
+       ANIMATIONS
+    ═══════════════════════════════════════════════════ */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero__brand-badge { animation: fadeUp 0.4s ease both; }
+    .hero h1           { animation: fadeUp 0.45s 0.07s ease both; }
+    .hero__sub         { animation: fadeUp 0.45s 0.14s ease both; }
+    .hero__actions     { animation: fadeUp 0.45s 0.2s ease both; }
+    .hero__visual      { animation: fadeUp 0.55s 0.1s ease both; }
+
+    /* Scroll reveal utility */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.55s var(--ease), transform 0.55s var(--ease);
+    }
+    [data-reveal].revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ═══════════════════════════════════════════════════
+       RESPONSIVE — TABLET ≤ 1024px
+    ═══════════════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .hero__inner     { grid-template-columns: 1fr; gap: var(--sp-12); }
+      .hero__visual    { max-width: 480px; margin: 0 auto; }
+      .hero h1         { font-size: clamp(2.2rem, 5vw, 3.2rem); }
+
+      .mission-grid    { grid-template-columns: 1fr; gap: var(--sp-10); }
+      .who-grid        { grid-template-columns: 1fr; gap: var(--sp-10); }
+      .who-float       { display: none; }
+
+      .stats-grid      { grid-template-columns: repeat(2, 1fr); gap: var(--sp-6); }
+      .stat-item + .stat-item::before { display: none; }
+      .stat-item { border: 1px solid var(--rule); border-radius: var(--r-lg); padding: var(--sp-5); }
+
+      .why-grid        { grid-template-columns: repeat(2, 1fr); }
+      .values-strip-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ═══════════════════════════════════════════════════
+       RESPONSIVE — MOBILE ≤ 640px
+    ═══════════════════════════════════════════════════ */
+    @media (max-width: 640px) {
+      :root { --nav-h: 62px; }
+
+      /* Nav */
+      .nav__links  { display: none; }
+      .nav__cta    { display: none; }
+      .nav__burger { display: flex; }
+
+      /* Hero */
+      .hero { padding: var(--sp-12) 0 var(--sp-10); }
+      .hero h1 { font-size: 2.1rem; }
+      .hero__sub { font-size: 1rem; }
+
+      /* Sections */
+      .section { padding: var(--sp-12) 0; }
+
+      /* Grids */
+      .why-grid          { grid-template-columns: 1fr; }
+      .values-strip-grid { grid-template-columns: 1fr; }
+      .stats-grid        { grid-template-columns: 1fr; gap: var(--sp-4); }
+      .hero-card__stats  { grid-template-columns: repeat(3, 1fr); }
+
+      /* Card */
+      .hero-card { padding: var(--sp-6); }
+      .who-main-card { padding: var(--sp-6); }
+
+      /* Typography */
+      .section-title   { font-size: 1.7rem; }
+      .mission-prose h2 { font-size: 1.7rem; }
+      .who-prose h2    { font-size: 1.7rem; }
+      .cta-section h2  { font-size: 1.9rem; }
+
+      /* Pull quote */
+      .pull-quote { padding: var(--sp-4); }
+      .pull-quote__text { font-size: 1rem; }
+    }
+
+    @media (max-width: 400px) {
+      .container { padding: 0 var(--sp-4); }
+      .hero-card__stats { grid-template-columns: 1fr 1fr; gap: var(--sp-2); }
+      .hero-stat:last-child { grid-column: 1 / -1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav__inner">
+
+      <!-- Back to home (left) -->
+      <a href="index.html" class="nav__back" aria-label="Back to BG Eraser Pro home">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2.2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="19" y1="12" x2="5" y2="12"/>
+          <polyline points="12 19 5 12 12 5"/>
+        </svg>
+        Back to Home
+      </a>
+
+      <!-- Logo (centre) -->
+      <a href="index.html" class="nav__logo" aria-label="BG Eraser Pro — Home">
+        <div class="nav__logo-gem" aria-hidden="true">✦</div>
+        BG<em>Eraser</em>&nbsp;Pro
+      </a>
+
+      <!-- Nav links (right) -->
+      <div class="nav__links">
+        <a href="index.html">Tool</a>
+        <a href="about.html" class="active" aria-current="page">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="index.html" class="nav__cta">Remove BG Free →</a>
+      </div>
+
+      <!-- Burger -->
+      <button class="nav__burger" id="burgerBtn"
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+              aria-controls="navDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="nav__drawer" id="navDrawer" aria-hidden="true">
+      <a href="index.html">Tool</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       BREADCRUMB
+  ══════════════════════════════════════ -->
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <span class="breadcrumb__current" aria-current="page">About Us</span>
+      </nav>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ══════════════════════════════════════
+         HERO
+    ══════════════════════════════════════ -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero__geo" aria-hidden="true">
+        <div class="hero__geo-circle hero__geo-circle--a"></div>
+        <div class="hero__geo-circle hero__geo-circle--b"></div>
+        <div class="hero__geo-circle hero__geo-circle--c"></div>
+        <div class="hero__geo-grid"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero__inner">
+
+          <!-- Copy -->
+          <div class="hero__copy">
+            <div class="hero__brand-badge" aria-label="Brand identity">
+              <div class="hero__brand-dot" aria-hidden="true">CS</div>
+              <span class="hero__brand-name">CreativeStack Web</span>
+              <div class="hero__brand-sep" aria-hidden="true"></div>
+              <span class="hero__brand-tag">Independent Studio</span>
+            </div>
+
+            <h1 id="hero-heading">
+              We Build Tools That<br />
+              <em>Empower Creators</em>
+            </h1>
+
+            <p class="hero__sub">
+              BG Eraser Pro is our flagship free utility — an AI-powered background
+              removal tool that gives every designer, seller, photographer, and creator
+              access to professional-grade image editing, completely free of charge.
+            </p>
+
+            <div class="hero__actions">
+              <a href="index.html" class="btn btn--primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+                Try the Tool Free
+              </a>
+              <a href="contact.html" class="btn btn--ghost">
+                Get in Touch
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.2"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Visual card -->
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero-card">
+              <div class="hero-card__badge">
+                <div class="hero-card__badge-dot"></div>
+                Live &amp; Free
+              </div>
+
+              <div class="hero-card__header">
+                <div class="hero-card__traffic">
+                  <div class="hct hct--r"></div>
+                  <div class="hct hct--y"></div>
+                  <div class="hct hct--g"></div>
+                </div>
+                <span class="hero-card__title">BG Eraser Pro — Upload Zone</span>
+              </div>
+
+              <div class="hero-card__upload">
+                <div class="hero-card__upload-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2"
+                       stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 16 12 12 8 16"/>
+                    <line x1="12" y1="12" x2="12" y2="21"/>
+                    <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/>
+                  </svg>
+                </div>
+                <p class="hero-card__upload-title">Drag &amp; Drop Your Image</p>
+                <p class="hero-card__upload-sub">or click to browse from your device</p>
+              </div>
+
+              <div class="hero-card__formats">
+                <span class="fchip fchip--png">PNG</span>
+                <span class="fchip fchip--jpg">JPG</span>
+                <span class="fchip fchip--svg">SVG</span>
+                <span class="fchip fchip--webp">WebP</span>
+              </div>
+
+              <div class="hero-card__stats">
+                <div class="hero-stat">
+                  <div class="hero-stat__num">100%</div>
+                  <div class="hero-stat__label">Free</div>
+                </div>
+                <div class="hero-stat">
+                  <div class="hero-stat__num">&lt;5s</div>
+                  <div class="hero-stat__label">Result</div>
+                </div>
+                <div class="hero-stat">
+                  <div class="hero-stat__num">0</div>
+                  <div class="hero-stat__label">Storage</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         STATS BAND
+    ══════════════════════════════════════ -->
+    <div class="stats-band" aria-label="Key metrics">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item" data-reveal>
+            <div class="stat-item__num"><span>100%</span></div>
+            <div class="stat-item__label">Automated AI Processing<br />No manual steps required</div>
+          </div>
+          <div class="stat-item" data-reveal>
+            <div class="stat-item__num"><span>0</span></div>
+            <div class="stat-item__label">Images Ever Stored<br />Absolute zero data retention</div>
+          </div>
+          <div class="stat-item" data-reveal>
+            <div class="stat-item__num"><span>4</span></div>
+            <div class="stat-item__label">Formats Supported<br />PNG · JPG · SVG · WebP</div>
+          </div>
+          <div class="stat-item" data-reveal>
+            <div class="stat-item__num"><span>Free</span></div>
+            <div class="stat-item__label">Always — No Paywall<br />No account. No credit card.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         OUR MISSION
+    ══════════════════════════════════════ -->
+    <section class="section section--alt" id="mission" aria-labelledby="mission-heading">
+      <div class="container">
+        <div class="mission-grid">
+
+          <!-- Left: prose -->
+          <div class="mission-prose">
+            <div class="section-eyebrow" data-reveal>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2.5"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+              Our Mission
+            </div>
+
+            <h2 id="mission-heading" data-reveal>
+              Making Professional<br />
+              Image Editing <em>Accessible</em><br />
+              to Everyone
+            </h2>
+
+            <div data-reveal>
+              <p>
+                Background removal was once a task that demanded expensive software
+                subscriptions, hours of training, and considerable technical skill.
+                Designers spent painstaking time with Photoshop's pen tool; small
+                business owners paid professionals for what should have been a
+                five-second job. <strong>We built BG Eraser Pro to change that.</strong>
+              </p>
+
+              <p>
+                Our mission is simple: give every photographer, e-commerce seller,
+                content creator, and graphic designer instant access to a
+                <strong>professional-grade background removal tool</strong> at absolutely
+                no cost. By combining modern deep-learning AI with an intuitive, clutter-free
+                browser interface, we have reduced what was once a complex, multi-step
+                editing workflow down to a single click.
+              </p>
+
+              <div class="pull-quote">
+                <p class="pull-quote__text">
+                  "Great creative tools should not be gated by budget, technical skill,
+                  or geography. The best tools should be available to everyone."
+                </p>
+                <span class="pull-quote__source">— CreativeStack Web, Studio Principles</span>
+              </div>
+
+              <p>
+                We accomplish this by integrating the <strong>remove.bg neural network</strong> —
+                one of the most accurate AI segmentation engines available — with a
+                zero-friction web interface. No installation. No account. No waiting list.
+                Upload, process, download. Done in under five seconds.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: process steps -->
+          <div class="mission-visual" data-reveal>
+            <div class="mission-step">
+              <div class="mission-step__num">01</div>
+              <div class="mission-step__icon"
+                   style="background: var(--accent-light); color: var(--accent);"
+                   aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 16 12 12 8 16"/>
+                  <line x1="12" y1="12" x2="12" y2="21"/>
+                  <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/>
+                </svg>
+              </div>
+              <div class="mission-step__body">
+                <div class="mission-step__title">Upload Any Image</div>
+                <div class="mission-step__desc">
+                  Drag and drop or browse to select a PNG, JPG, JPEG, SVG, or WebP file
+                  directly from your device. No compression, no quality loss on your end.
+                </div>
+              </div>
+            </div>
+
+            <div class="mission-step">
+              <div class="mission-step__num">02</div>
+              <div class="mission-step__icon"
+                   style="background: var(--violet-light); color: var(--violet);"
+                   aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </div>
+              <div class="mission-step__body">
+                <div class="mission-step__title">AI Processes via Secure API</div>
+                <div class="mission-step__desc">
+                  Your image is sent directly from your browser to the remove.bg neural
+                  network over HTTPS. Our server never touches or stores your file.
+                </div>
+              </div>
+            </div>
+
+            <div class="mission-step">
+              <div class="mission-step__num">03</div>
+              <div class="mission-step__icon"
+                   style="background: var(--sky-light); color: var(--sky);"
+                   aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+              </div>
+              <div class="mission-step__body">
+                <div class="mission-step__title">Download a Crisp Transparent PNG</div>
+                <div class="mission-step__desc">
+                  Receive a full-resolution, watermark-free transparent PNG directly in
+                  your browser — ready for design, e-commerce, or social media in seconds.
+                </div>
+              </div>
+            </div>
+
+            <div class="mission-step">
+              <div class="mission-step__num">04</div>
+              <div class="mission-step__icon"
+                   style="background: var(--green-light); color: var(--green);"
+                   aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <div class="mission-step__body">
+                <div class="mission-step__title">Your Privacy is Guaranteed</div>
+                <div class="mission-step__desc">
+                  The processed image is delivered to your browser only. No copy is
+                  retained anywhere. Your creative work remains 100% yours.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         VALUES STRIP
+    ══════════════════════════════════════ -->
+    <div class="values-strip section--border-top">
+      <div class="container">
+        <div class="values-strip-grid">
+          <div class="value-item" data-reveal>
+            <div class="value-item__icon"
+                 style="background: var(--accent-light); border-color: var(--accent-mid); color: var(--accent);"
+                 aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h4>Privacy First</h4>
+            <p>We never store, log, or analyse your images. Your uploads are processed
+               in real time and immediately discarded — no exceptions, no asterisks.</p>
+          </div>
+
+          <div class="value-item" data-reveal>
+            <div class="value-item__icon"
+                 style="background: var(--green-light); border-color: var(--green-mid); color: var(--green);"
+                 aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="16"/>
+                <line x1="8" y1="12" x2="16" y2="12"/>
+              </svg>
+            </div>
+            <h4>Zero Barriers</h4>
+            <p>No account creation, no credit card, no freemium paywall. The core tool
+               is free for everyone, sustained by non-intrusive advertising.</p>
+          </div>
+
+          <div class="value-item" data-reveal>
+            <div class="value-item__icon"
+                 style="background: var(--amber-light); border-color: var(--amber-mid); color: var(--amber);"
+                 aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <h4>Quality Always</h4>
+            <p>By partnering with the remove.bg API, we guarantee HD transparent PNG
+               results with pixel-perfect edge detection — every single time.</p>
+          </div>
+
+          <div class="value-item" data-reveal>
+            <div class="value-item__icon"
+                 style="background: var(--violet-light); border-color: var(--violet-mid); color: var(--violet);"
+                 aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                <line x1="12" y1="18" x2="12.01" y2="18"/>
+              </svg>
+            </div>
+            <h4>Works Everywhere</h4>
+            <p>Responsive, accessible, and fully functional on every device — from a
+               budget smartphone to an ultrawide desktop workstation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         WHO WE ARE
+    ══════════════════════════════════════ -->
+    <section class="section" id="who-we-are" aria-labelledby="who-heading">
+      <div class="container">
+        <div class="who-grid">
+
+          <!-- Visual side -->
+          <div class="who-visual" data-reveal>
+            <div class="who-main-card">
+              <div class="who-main-card__logo">
+                <div class="who-logo-gem" aria-hidden="true">✦</div>
+                <div class="who-logo-text">
+                  Creative<em>Stack</em> Web
+                </div>
+              </div>
+
+              <h3>An independent studio building tools that matter.</h3>
+
+              <p>
+                We are a focused development studio dedicated to creating practical,
+                beautifully designed web utilities that solve real creative workflow
+                problems — without unnecessary complexity, bloated code, or subscription
+                paywalls standing in the way.
+              </p>
+
+              <div class="who-pillars" role="list">
+                <div class="who-pillar" role="listitem">
+                  <div class="who-pillar__check" aria-hidden="true">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="3"
+                         stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  </div>
+                  <span class="who-pillar__text">Clean, performant, accessible code</span>
+                </div>
+                <div class="who-pillar" role="listitem">
+                  <div class="who-pillar__check" aria-hidden="true">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="3"
+                         stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  </div>
+                  <span class="who-pillar__text">Privacy-first architecture</span>
+                </div>
+                <div class="who-pillar" role="listitem">
+                  <div class="who-pillar__check" aria-hidden="true">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="3"
+                         stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  </div>
+                  <span class="who-pillar__text">No paywalls on core functionality</span>
+                </div>
+                <div class="who-pillar" role="listitem">
+                  <div class="who-pillar__check" aria-hidden="true">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="3"
+                         stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  </div>
+                  <span class="who-pillar__text">Open source where possible</span>
+                </div>
+                <div class="who-pillar" role="listitem">
+                  <div class="who-pillar__check" aria-hidden="true">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="3"
+                         stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  </div>
+                  <span class="who-pillar__text">Mobile-first, device-agnostic design</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating accent badges (hidden on mobile) -->
+            <div class="who-float who-float--a" aria-hidden="true">
+              <div class="who-float__icon"
+                   style="background: var(--green-light); color: var(--green);">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.5"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+              Zero image storage
+            </div>
+            <div class="who-float who-float--b" aria-hidden="true">
+              <div class="who-float__icon"
+                   style="background: var(--accent-light); color: var(--accent);">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2.5"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              HTTPS encrypted
+            </div>
+          </div>
+
+          <!-- Prose side -->
+          <div class="who-prose">
+            <div class="section-eyebrow" data-reveal>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2.5"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+              Who We Are
+            </div>
+
+            <h2 id="who-heading" data-reveal>
+              <em>CreativeStack Web</em> —<br />
+              A Studio for Builders<br />
+              and Creators
+            </h2>
+
+            <div data-reveal>
+              <p>
+                CreativeStack Web (published under the GitHub handle
+                <strong><code style="font-family: var(--font-mono); font-size: 0.9em;">creativestack-web</code></strong>)
+                is an independent web development studio dedicated to building fast,
+                accessible, and genuinely useful browser-based applications. We are
+                developers, designers, and problem-solvers who believe that the web
+                is the most powerful, democratised platform ever created — and we
+                build accordingly.
+              </p>
+
+              <p>
+                Our work is guided by a commitment to <strong>technical excellence</strong>
+                and <strong>user respect</strong>. Every tool we release is built to be
+                lightweight (no bloated frameworks where they aren't needed), privacy-safe
+                (no unnecessary data collection), and universally accessible
+                (semantic HTML, WCAG-informed design, tested on all major devices
+                and browsers).
+              </p>
+
+              <p>
+                BG Eraser Pro represents everything CreativeStack Web stands for: a
+                <strong>premium-quality tool</strong>, made available to the world
+                for free, with no compromises on privacy, performance, or user experience.
+                We are proud to host it openly on GitHub Pages, making it transparent,
+                auditable, and accessible to anyone with an internet connection.
+              </p>
+            </div>
+
+            <div class="tool-links" data-reveal aria-label="Studio links">
+              <a href="https://github.com/creativestack-web"
+                 class="tool-link"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="Visit CreativeStack on GitHub">
+                <div class="tool-link__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </div>
+                <div class="tool-link__text">
+                  <span class="tool-link__name">GitHub — creativestack-web</span>
+                  <span class="tool-link__desc">Open source projects, source code, and releases</span>
+                </div>
+                <div class="tool-link__arrow" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2.2"
+                       stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                    <polyline points="12 5 19 12 12 19"/>
+                  </svg>
+                </div>
+              </a>
+
+              <a href="index.html" class="tool-link" aria-label="Open BG Eraser Pro tool">
+                <div class="tool-link__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2"
+                       stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                  </svg>
+                </div>
+                <div class="tool-link__text">
+                  <span class="tool-link__name">BG Eraser Pro — Live Tool</span>
+                  <span class="tool-link__desc">Our flagship free AI background remover</span>
+                </div>
+                <div class="tool-link__arrow" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2.2"
+                       stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                    <polyline points="12 5 19 12 12 19"/>
+                  </svg>
+                </div>
+              </a>
+
+              <a href="contact.html" class="tool-link" aria-label="Contact CreativeStack">
+                <div class="tool-link__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2"
+                       stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div class="tool-link__text">
+                  <span class="tool-link__name">Contact &amp; Support</span>
+                  <span class="tool-link__desc">Get help, report bugs, or say hello</span>
+                </div>
+                <div class="tool-link__arrow" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2.2"
+                       stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                    <polyline points="12 5 19 12 12 19"/>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         WHY CHOOSE US
+    ══════════════════════════════════════ -->
+    <section class="section section--alt section--border-top" id="why-choose-us" aria-labelledby="why-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-eyebrow" data-reveal>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 11 12 14 22 4"/>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+            </svg>
+            Why Choose Us
+          </div>
+          <h2 id="why-heading" class="section-title" data-reveal>
+            Built Different by Design
+          </h2>
+          <p class="section-sub section-sub--center" data-reveal>
+            BG Eraser Pro was not built to compete with enterprise software —
+            it was built to replace the need for it in everyday creative workflows.
+            Here's what sets it apart.
+          </p>
+        </div>
+
+        <div class="why-grid">
+
+          <!-- Card 1 -->
+          <div class="why-card" data-reveal
+               style="--card-accent: linear-gradient(90deg, var(--accent), #818cf8);
+                      --card-bg: rgba(59,91,219,0.04);">
+            <div class="why-card__icon"
+                 style="background: var(--accent-light);"
+                 aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                   stroke="var(--accent)" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <h3>100% Automated AI Processing</h3>
+            <p>
+              There are no manual selection tools, no lasso handles to drag, no
+              complex masking layers to manage. Upload your image and the
+              deep-learning neural network handles every pixel decision automatically —
+              including fine hair, fur, and complex transparent edges — in under
+              five seconds.
+            </p>
+            <span class="why-card__tag"
+                  style="color: var(--accent-text); border-color: var(--accent-mid); background: var(--accent-light);">
+              No manual steps required
+            </span>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="why-card" data-reveal
+               style="--card-accent: linear-gradient(90deg, var(--green), #34d399);
+                      --card-bg: rgba(22,163,74,0.04);">
+            <div class="why-card__icon"
+                 style="background: var(--green-light);"
+                 aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                   stroke="var(--green)" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <h3>Zero Mandatory Installation</h3>
+            <p>
+              BG Eraser Pro runs entirely inside your web browser. There is no desktop
+              software to download, no browser extension to install, no plugin to configure,
+              and no operating system restriction. If your device has a modern browser
+              and an internet connection, the tool works — immediately and completely.
+            </p>
+            <span class="why-card__tag"
+                  style="color: var(--green-text); border-color: var(--green-mid); background: var(--green-light);">
+              Browser-native, no setup
+            </span>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="why-card" data-reveal
+               style="--card-accent: linear-gradient(90deg, var(--violet), #a78bfa);
+                      --card-bg: rgba(124,58,237,0.04);">
+            <div class="why-card__icon"
+                 style="background: var(--violet-light);"
+                 aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                   stroke="var(--violet)" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3>Absolute Privacy — Zero Image Retention</h3>
+            <p>
+              Your images are transmitted over HTTPS encryption directly from your
+              browser to the remove.bg processing API. BG Eraser Pro never receives,
+              stores, caches, indexes, or retains a copy of your uploaded or processed
+              images. The moment your transparent PNG is delivered, the transaction is
+              complete — there is nothing left on our end.
+            </p>
+            <span class="why-card__tag"
+                  style="color: var(--violet); border-color: var(--violet-mid); background: var(--violet-light);">
+              Zero data retention
+            </span>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="why-card" data-reveal
+               style="--card-accent: linear-gradient(90deg, var(--amber), #fbbf24);
+                      --card-bg: rgba(217,119,6,0.04);">
+            <div class="why-card__icon"
+                 style="background: var(--amber-light);"
+                 aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                   stroke="var(--amber)" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                <line x1="12" y1="18" x2="12.01" y2="18"/>
+              </svg>
+            </div>
+            <h3>Optimised Across All Hardware</h3>
+            <p>
+              From a mid-range Android smartphone on a 4G connection to a high-end
+              MacBook Pro on fibre broadband — BG Eraser Pro is engineered to perform
+              flawlessly across every combination of device, screen size, and network
+              condition. The interface adapts intelligently; the result quality never
+              degrades regardless of the hardware you're using.
+            </p>
+            <span class="why-card__tag"
+                  style="color: var(--amber); border-color: var(--amber-mid); background: var(--amber-light);">
+              All devices supported
+            </span>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="why-card" data-reveal
+               style="--card-accent: linear-gradient(90deg, var(--sky), #38bdf8);
+                      --card-bg: rgba(2,132,199,0.04);">
+            <div class="why-card__icon"
+                 style="background: var(--sky-light);"
+                 aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                   stroke="var(--sky)" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <h3>Professional HD Quality Output</h3>
+            <p>
+              Unlike many free tools that silently compress or downscale your image
+              before returning a result, BG Eraser Pro uses the full-resolution
+              processing pipeline. The transparent PNG you download is delivered at
+              your original upload resolution — ready for print, advertising, digital
+              compositing, and commercial use without any quality compromise.
+            </p>
+            <span class="why-card__tag"
+                  style="color: var(--sky); border-color: var(--sky-mid); background: var(--sky-light);">
+              Full resolution, no compression
+            </span>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="why-card" data-reveal
+               style="--card-accent: linear-gradient(90deg, var(--rose), #fb7185);
+                      --card-bg: rgba(225,29,72,0.04);">
+            <div class="why-card__icon"
+                 style="background: var(--rose-light);"
+                 aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                   stroke="var(--rose)" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <h3>Formats for Every Workflow</h3>
+            <p>
+              Whether you're a web developer working with WebP, a brand designer uploading
+              SVG logos, an e-commerce photographer using JPEGs, or a print designer
+              working in PNG — BG Eraser Pro accepts all major image formats without
+              any conversion step on your end. The output is always a clean,
+              industry-standard transparent PNG.
+            </p>
+            <span class="why-card__tag"
+                  style="color: var(--rose); border-color: var(--rose-mid); background: var(--rose-light);">
+              PNG · JPG · SVG · WebP
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         DARK CTA
+    ══════════════════════════════════════ -->
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-section__inner">
+          <div class="section-eyebrow section-eyebrow--white" data-reveal>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            Ready to Start?
+          </div>
+
+          <h2 id="cta-heading" data-reveal>
+            Remove Your First Background.<br />
+            <em>It Takes Ten Seconds.</em>
+          </h2>
+
+          <p data-reveal>
+            No account. No software. No credit card. Just upload your image
+            and let the AI do the work — for free, every time.
+          </p>
+
+          <div class="cta-actions" data-reveal>
+            <a href="index.html" class="btn btn--white">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="16 16 12 12 8 16"/>
+                <line x1="12" y1="12" x2="12" y2="21"/>
+                <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/>
+              </svg>
+              Try BG Eraser Pro Free
+            </a>
+            <a href="contact.html" class="btn btn--outline-white">
+              Contact the Studio
+            </a>
+          </div>
+
+          <div class="cta-trust" role="list" data-reveal>
+            <div class="cta-trust-item" role="listitem">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              Zero image storage
+            </div>
+            <div class="cta-trust-item" role="listitem">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              No account required
+            </div>
+            <div class="cta-trust-item" role="listitem">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              No watermarks
+            </div>
+            <div class="cta-trust-item" role="listitem">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Free forever
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <a href="index.html" class="footer__logo" aria-label="BG Eraser Pro — Home">
+        <div class="nav__logo-gem" style="width:28px;height:28px;font-size:0.75rem;" aria-hidden="true">✦</div>
+        BG<em>Eraser</em>&nbsp;Pro
+      </a>
+
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="index.html">Tool</a>
+        <a href="about.html" class="active" aria-current="page">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </nav>
+
+      <p class="footer__legal">
+        &copy; <span id="footerYear"></span> BG Eraser Pro by
+        <a href="https://github.com/creativestack-web"
+           target="_blank" rel="noopener noreferrer">CreativeStack Web</a>.
+        Background removal powered by
+        <a href="https://www.remove.bg" target="_blank" rel="noopener noreferrer">remove.bg</a>.
+        All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════
+       JAVASCRIPT
+  ══════════════════════════════════════ -->
+  <script>
+    'use strict';
+
+    /* ─── Footer year ─── */
+    document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+    /* ─── Mobile navigation ─── */
+    const burger = document.getElementById('burgerBtn');
+    const drawer = document.getElementById('navDrawer');
+
+    burger.addEventListener('click', () => {
+      const open = drawer.classList.toggle('open');
+      burger.setAttribute('aria-expanded', String(open));
+      drawer.setAttribute('aria-hidden',   String(!open));
+    });
+    drawer.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        drawer.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+        drawer.setAttribute('aria-hidden', 'true');
+      });
+    });
+
+    /* ─── Scroll reveal ─── */
+    (function initReveal() {
+      const targets = document.querySelectorAll('[data-reveal]');
+      if (!targets.length || !window.IntersectionObserver) {
+        /* Fallback: make all visible immediately */
+        targets.forEach(el => el.classList.add('revealed'));
+        return;
+      }
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          /* Stagger siblings within same parent */
+          const siblings = [...entry.target.parentElement.children];
+          const idx      = siblings.indexOf(entry.target);
+          entry.target.style.transitionDelay = `${Math.min(idx * 0.08, 0.4)}s`;
+          entry.target.classList.add('revealed');
+          io.unobserve(entry.target);
+        });
+      }, { threshold: 0.1 });
+
+      targets.forEach(el => io.observe(el));
+    })();
+
+    /* ─── Smooth scroll (honour sticky header offset) ─── */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const id     = this.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        if (!target) return;
+        e.preventDefault();
+        const navH = parseInt(
+          getComputedStyle(document.documentElement)
+            .getPropertyValue('--nav-h')
+        ) || 66;
+        const top = target.getBoundingClientRect().top + window.scrollY - navH - 12;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
